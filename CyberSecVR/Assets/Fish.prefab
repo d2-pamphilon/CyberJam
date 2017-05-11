@@ -281,7 +281,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4809072863150242}
   - component: {fileID: 95417684982501638}
-  - component: {fileID: 64899747561413924}
+  - component: {fileID: 65046772480030300}
   m_Layer: 0
   m_Name: cruscarp
   m_TagString: Untagged
@@ -962,8 +962,8 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 1
---- !u!64 &64899747561413924
-MeshCollider:
+--- !u!65 &65046772480030300
+BoxCollider:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
@@ -972,10 +972,8 @@ MeshCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Convex: 0
-  m_InflateMesh: 0
-  m_SkinWidth: 0.01
-  m_Mesh: {fileID: 0}
+  m_Size: {x: 0.1, y: 0.1, z: 0.1}
+  m_Center: {x: 0, y: 0, z: -0.02}
 --- !u!95 &95417684982501638
 Animator:
   serializedVersion: 3

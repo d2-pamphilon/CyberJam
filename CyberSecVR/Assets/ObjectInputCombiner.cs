@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class ObjectInputCombiner : MonoBehaviour {
 
-	void OnTriggerEnter (Collider other)
+	void OnCollisionEnter (Collision other)
 	{
-		CombinableObject cObj = other.gameObject.GetComponent<CombinableObject>();
+		CombinableObject cObj = other.gameObject.GetComponentInChildren<CombinableObject>();
 		if (cObj)
 		{
 			GetComponentInParent<Blender>().addObject(cObj.type);

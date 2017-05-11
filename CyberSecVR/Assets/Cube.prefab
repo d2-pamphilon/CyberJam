@@ -24,7 +24,6 @@ GameObject:
   - component: {fileID: 114933008521981858}
   - component: {fileID: 114553405969510580}
   - component: {fileID: 114852571680933554}
-  - component: {fileID: 114668730487186352}
   m_Layer: 0
   m_Name: Cube
   m_TagString: Untagged
@@ -43,6 +42,7 @@ GameObject:
   - component: {fileID: 33730467508386626}
   - component: {fileID: 23747745836978400}
   - component: {fileID: 65604616253545470}
+  - component: {fileID: 114833438523836836}
   m_Layer: 0
   m_Name: Cube
   m_TagString: Untagged
@@ -57,7 +57,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1322476369969138}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.351, y: 0.211, z: -4.576}
+  m_LocalPosition: {x: -0.9121372, y: 1.187, z: -0.001}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4605195692055888}
@@ -203,12 +203,12 @@ MonoBehaviour:
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
       PublicKeyToken=null
   snapAttachEaseInCompleted: 0
---- !u!114 &114668730487186352
+--- !u!114 &114833438523836836
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1322476369969138}
+  m_GameObject: {fileID: 1630487291835328}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 818565fd2e97f483996093187b1a8e24, type: 3}

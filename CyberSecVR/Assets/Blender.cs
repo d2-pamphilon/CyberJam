@@ -21,12 +21,13 @@ public class Blender : MonoBehaviour {
 	List<CombinableObjectType> collectedObjects;
 
 	[SerializeField]
-	List<objectPairWithOutput> outputs;
+	List<objectPairWithOutput> outputs = new List<objectPairWithOutput>();
 
-	//public int hello;
+    //public int hello;
 
-	// Use this for initialization
-	void Start () {
+    // Use this for initialization
+    void Start () {
+        collectedObjects = new List<CombinableObjectType>();
 	}
 	
 	// Update is called once per frame
@@ -43,7 +44,7 @@ public class Blender : MonoBehaviour {
 			if (newGO)
 			{
 				GameObject instance = Instantiate(newGO);
-				instance.transform.position = transform.FindChild("Output").transform.position;
+				instance.transform.position = transform.FindChild("OutputPoint").transform.position;
 				collectedObjects.Clear();
 			}
 		}
@@ -54,7 +55,18 @@ public class Blender : MonoBehaviour {
 	{
 		for (int i = 0; i < outputs.Count; i++)
 		{
-			if (outputs[i].collectedObjects == collectedObjects)
+            int sameCount = 0;
+            for (int j = 0; j < collectedObjects.Count; j++)
+            {
+                for (int k = 0; k < outputs[i].collectedObjects.Count; k++)
+                {
+                    if (outputs[i].collectedObjects[k] == collectedObjects[j])
+                    {
+                        sameCount++;
+                    }
+                }
+            }
+			if (sameCount == collectedObjects.Count)
 			{
 				return outputs[i].output;
 			}

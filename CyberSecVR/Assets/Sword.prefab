@@ -24,7 +24,6 @@ GameObject:
   - component: {fileID: 114314281334206312}
   - component: {fileID: 114586229249405542}
   - component: {fileID: 114727664753748468}
-  - component: {fileID: 114193599041980786}
   m_Layer: 0
   m_Name: Sword
   m_TagString: Untagged
@@ -43,6 +42,7 @@ GameObject:
   - component: {fileID: 33778867238121702}
   - component: {fileID: 23370367299724160}
   - component: {fileID: 65025830237611058}
+  - component: {fileID: 114017529334851962}
   m_Layer: 0
   m_Name: free_sword
   m_TagString: Untagged
@@ -57,7 +57,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1032134910478436}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.892, y: 0.239, z: 0.194}
+  m_LocalPosition: {x: -1.0239432, y: 1.2682, z: -0.442}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4369016539783292}
@@ -142,12 +142,12 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.11, y: 1, z: 0.092517406}
   m_Center: {x: 0, y: 0.38, z: 0}
---- !u!114 &114193599041980786
+--- !u!114 &114017529334851962
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1032134910478436}
+  m_GameObject: {fileID: 1628589636759068}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 818565fd2e97f483996093187b1a8e24, type: 3}
