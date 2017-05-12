@@ -8,7 +8,7 @@ namespace Virus
 
     public class ParticleManager : MonoBehaviour
     {
-        public enum Attack
+        /*public enum Attack
         {
 
             TOJAN,
@@ -23,17 +23,19 @@ namespace Virus
             DNS,
             MIM,
             NULL
-        }
+        }*/
 
-        public Dictionary<Attack, GameObject> m_ParticleObjects;
+       // public Dictionary<Attack, GameObject> m_ParticleObjects;
 
-        public Attack m_Type;
+        //public Attack m_Type;
         public List<GameObject> m_Particles;
 
         public int m_SphereSize;
 
         public GameObject m_FishSpawn;
-
+        [SerializeField] ComputerController m_comCon;
+        public UsbProgram m_program;
+        public UsbProgram.Program m_ProgVirus;
         private float m_Timer;
         private float m_Time;
    
@@ -43,16 +45,19 @@ namespace Virus
         {
             m_Time = 0;
            // m_Particles = new List<GameObject>();
-            m_ParticleObjects = new Dictionary<Attack, GameObject>();
+          //  m_ParticleObjects = new Dictionary<Attack, GameObject>();
             m_SphereSize = 10;
 
-            DictionarySetUp();
+            m_comCon = GetComponent<ComputerController>();
+            m_program = m_comCon.GetComponent<UsbProgram>();
+
+         //   m_ProgVirus = m_program.program;
         }
 
-        public void DictionarySetUp()
+      /*  public void DictionarySetUp()
         {
             m_ParticleObjects.Add(Attack.TOJAN, m_Particles[0]);
-           /* m_ParticleObjects.Add(Attack.FISHING, m_Particles[1]);
+            m_ParticleObjects.Add(Attack.FISHING, m_Particles[1]);
             m_ParticleObjects.Add(Attack.ROUGE, m_Particles[2]);
             m_ParticleObjects.Add(Attack.DOS, m_Particles[3]);
             m_ParticleObjects.Add(Attack.RANSOM, m_Particles[4]);
@@ -61,8 +66,8 @@ namespace Virus
             m_ParticleObjects.Add(Attack.BRUTE_FORCE, m_Particles[7]);
             m_ParticleObjects.Add(Attack.BACK_DOOR, m_Particles[8]);
             m_ParticleObjects.Add(Attack.DNS, m_Particles[9]);
-            m_ParticleObjects.Add(Attack.MIM, m_Particles[10]);*/
-        }
+            m_ParticleObjects.Add(Attack.MIM, m_Particles[10]);
+        }*/
 
         // Update is called once per frame
         void Update()
@@ -70,37 +75,39 @@ namespace Virus
             m_Timer += Time.deltaTime;
             if (m_Timer >= m_Time)
             {
-                switch (m_Type)
+                switch (m_ProgVirus)
                 {
-                    case Attack.NULL:
+                    case UsbProgram.Program.NONE:
                         break;
-                    case Attack.BACK_DOOR:
+                    case UsbProgram.Program.BackDoor:
                         break;
-                    case Attack.BRUTE_FORCE:
+                    case UsbProgram.Program.BruteForce:
                         break;
-                    case Attack.DNS:
+                    case UsbProgram.Program.DNS:
                         break;
-                    case Attack.DOS: //fire particles
+                    case UsbProgram.Program.DDOS: //fire particles
                         break;
-                    case Attack.FISHING: // All the fish
-                        m_Time = 0.0f;
+                    case UsbProgram.Program.PhishingAttack: // All the fish
+                        m_Time = 0.25f;
                         Vector3 t_pos = m_FishSpawn.transform.position;
-                        t_pos.z +=  UnityEngine.Random.Range(-1.0f, 1.0f);
+                        t_pos.x +=  UnityEngine.Random.Range(-1.0f, 1.0f);
                         Instantiate(m_Particles[2], t_pos, Quaternion.identity);
                         break;
-                    case Attack.KEYBOARD: // UI Text says no
+                    case UsbProgram.Program.KeyLogger: // UI Text says no
                         break;
-                    case Attack.MIM:
+                    case UsbProgram.Program.MIM:
                         break;
-                    case Attack.RANSOM: //Money
+                    case UsbProgram.Program.RansomVirus: //Money
+                        m_Time = 0.5f;
+                        Instantiate(m_Particles[3], transform.position, Quaternion.identity);
                         break;
-                    case Attack.ROUGE: //Tia Fighter
+                    case UsbProgram.Program.RogueSoftware: //Tia Fighter
                         break;
-                    case Attack.TOJAN: //Arrow fired into the PC
-                        m_Time = 1.5f;
-                        Instantiate(m_Particles[0], RandLoc(), Quaternion.LookRotation(gameObject.transform.position, Vector3.up));
+                    case UsbProgram.Program.TrojanHorse: //Arrow fired into the PC
+                        m_Time = 1.5f;                        
+                        Instantiate(m_Particles[0], RandLoc(), Quaternion.LookRotation(transform.position));
                         break;
-                    case Attack.WORMS:
+                    case UsbProgram.Program.Worms:
                         m_Time = 0.5f;
                         Instantiate(m_Particles[1], transform.position, Quaternion.identity);//Worms everywhere
                         break;
@@ -119,31 +126,5 @@ namespace Virus
 
             return m_randLoc;
         }
-
-
-        private void OnCollisionEnter(Collision collision)
-        {
-            CombinableObject m_CObject = collision.gameObject.GetComponentInChildren<CombinableObject>();
-
-
-            switch (m_CObject.type)
-            {
-
-                case Blender.CombinableObjectType.Banana:
-                    break;
-                case Blender.CombinableObjectType.Cube:
-                    break;
-                case Blender.CombinableObjectType.Sword:
-                    break;
-
-            }
-
-        }
-
-        private void OnCollisionExit(Collision collision)
-        {
-            m_Type = Attack.NULL;
-        }
-
     }
 }
