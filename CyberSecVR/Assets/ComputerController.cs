@@ -11,6 +11,7 @@ public class ComputerController : MonoBehaviour {
 
     void runProgram()
     {
+        GetComponent<Virus.ParticleManager>().m_ProgVirus = UsbPort.GetComponent<UsbGrabber>().usb.GetComponent<UsbProgram>().program;
         UsbPort.GetComponent<UsbGrabber>().usb.GetComponent<UsbProgram>().play(screen);
     }
 }

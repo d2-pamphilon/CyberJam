@@ -13,7 +13,7 @@ namespace Virus
         public bool m_MoveArrow;
 
         public Rigidbody m_ArrowRb;
-        public GameObject m_Target;
+        //public GameObject m_Target;
         // Use this for initialization
         void Start()
         {
@@ -22,7 +22,7 @@ namespace Virus
             m_Timer = 0.0f;
 
             m_MoveArrow = false;
-            gameObject.transform.LookAt(m_Target.transform);
+           // gameObject.transform.LookAt(m_Target.transform);
 
             m_ArrowRb = GetComponent<Rigidbody>();
             m_ArrowRb.useGravity = false;
