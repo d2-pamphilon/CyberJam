@@ -8,8 +8,20 @@ public class UsbProgram : MonoBehaviour {
     {
         NONE,
         PhishingAttack,
-        TrojanHorse
+        TrojanHorse,
+        RogueSoftware,
+        DDOS,
+        RansomVirus,
+        KeyLogger,
+        Worms
     }
 
     public Program program;
+
+
+    public void play(GameObject _screen)
+    {
+
+        return;
+    }
 }

@@ -9,7 +9,29 @@ public class Blender : MonoBehaviour {
 		NULL,
 		Sword,
 		Cube,
-		Banana
+		Banana,
+        Ball,
+        Doll,
+        Armour,
+        Fish,
+        TrophyHead,
+        LightSaber,
+        Knife,
+        BoxingGloves,
+        BlackHoodie,
+        Money,
+        PC,
+        Needle,
+        FullBucket,
+        Keyboard,
+        PianoKeyboard,
+        WoodChip,
+        Spider,
+        Worm,
+        TinyDoor,
+        SpinalCord,
+        Broom,
+        KnightPieceChess
 	}
 
 	[System.Serializable]

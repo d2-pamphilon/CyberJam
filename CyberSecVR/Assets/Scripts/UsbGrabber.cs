@@ -4,23 +4,18 @@ using UnityEngine;
 
 public class UsbGrabber : MonoBehaviour {
 
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+    public GameObject usb;
+
 
     void OnTriggerEnter(Collider other)
     {
         if (other.GetComponent<UsbProgram>())
         {
+            usb = other.gameObject;
             other.gameObject.transform.position = transform.FindChild("USB WAYPOINT").transform.position;
             other.gameObject.transform.rotation = transform.FindChild("USB WAYPOINT").transform.rotation;
-        }
 
+            other.GetComponent<Rigidbody>().velocity = Vector3.zero;
+        }
     }
 }
