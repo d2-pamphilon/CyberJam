@@ -4,7 +4,80 @@ timeCreated: 1494536909
 licenseType: Free
 ModelImporter:
   serializedVersion: 19
-  fileIDToRecycleName: {}
+  fileIDToRecycleName:
+    100000: Body
+    100002: Box01
+    100004: Box02
+    100006: Box03
+    100008: Box04
+    100010: Box05
+    100012: Box06
+    100014: Camera01
+    100016: Camera01.Target
+    100018: Ground
+    100020: Kable
+    100022: //RootNode
+    100024: Keys
+    100026: Keys_MeshPart0
+    100028: Keys_MeshPart1
+    100030: Kuplung
+    100032: Omni01
+    100034: Sky01
+    400000: Body
+    400002: Box01
+    400004: Box02
+    400006: Box03
+    400008: Box04
+    400010: Box05
+    400012: Box06
+    400014: Camera01
+    400016: Camera01.Target
+    400018: Ground
+    400020: Kable
+    400022: //RootNode
+    400024: Keys
+    400026: Keys_MeshPart0
+    400028: Keys_MeshPart1
+    400030: Kuplung
+    400032: Omni01
+    400034: Sky01
+    2300000: Body
+    2300002: Box01
+    2300004: Box02
+    2300006: Box03
+    2300008: Box04
+    2300010: Box05
+    2300012: Box06
+    2300014: Ground
+    2300016: Kable
+    2300018: Keys_MeshPart0
+    2300020: Keys_MeshPart1
+    2300022: Kuplung
+    3300000: Body
+    3300002: Box01
+    3300004: Box02
+    3300006: Box03
+    3300008: Box04
+    3300010: Box05
+    3300012: Box06
+    3300014: Ground
+    3300016: Kable
+    3300018: Keys_MeshPart0
+    3300020: Keys_MeshPart1
+    3300022: Kuplung
+    4300000: Kable
+    4300002: Ground
+    4300004: Body
+    4300006: Keys_MeshPart0
+    4300008: Keys_MeshPart1
+    4300010: Box01
+    4300012: Box02
+    4300014: Box03
+    4300016: Kuplung
+    4300018: Box04
+    4300020: Box05
+    4300022: Box06
+    9500000: //RootNode
   materials:
     importMaterials: 1
     materialName: 0

@@ -72,8 +72,6 @@ public class ViveCameraTexture : MonoBehaviour
         {
             Debug.LogError("Could not acquire handle to stream (error=" + cameraError + ")");
         }
-
-        GetComponent<RawImage>().texture = m_texture;
     }
 
     private void OnDestroy()
