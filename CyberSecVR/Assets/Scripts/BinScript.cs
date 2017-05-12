@@ -6,6 +6,9 @@ public class BinScript : MonoBehaviour {
 
 	void OnCollisionEnter(Collision col)
 	{
-		Destroy(col.gameObject);
+        if (col.gameObject.GetComponent<CombinableObject>())
+        {
+            Destroy(col.gameObject);
+        }
 	}
 }
