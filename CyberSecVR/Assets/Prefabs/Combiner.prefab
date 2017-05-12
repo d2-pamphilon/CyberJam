@@ -343,6 +343,8 @@ MonoBehaviour:
   outputs:
   - collectedObjects: 0000000001000000
     output: {fileID: 1095853664867394, guid: 1a4710ed3640340fcbd3a3791984f7dd, type: 2}
+  - collectedObjects: 0000000001000000
+    output: {fileID: 1095853664867394, guid: 1a4710ed3640340fcbd3a3791984f7dd, type: 2}
 --- !u!114 &114846694478795070
 MonoBehaviour:
   m_ObjectHideFlags: 1
