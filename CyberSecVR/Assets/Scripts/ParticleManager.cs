@@ -38,6 +38,7 @@ namespace Virus
         public UsbProgram.Program m_ProgVirus;
         private float m_Timer;
         private float m_Time;
+        private float m_TimerDuration;
    
 
         // Use this for initialization
@@ -73,8 +74,16 @@ namespace Virus
         void Update()
         {
             m_Timer += Time.deltaTime;
+            m_TimerDuration += Time.deltaTime;
+
+            if (m_TimerDuration >= 5.0f)
+            {
+                m_ProgVirus = UsbProgram.Program.NONE;
+                m_TimerDuration = 0.0f;
+            }
             if (m_Timer >= m_Time)
             {
+                
                 switch (m_ProgVirus)
                 {
                     case UsbProgram.Program.NONE:
@@ -88,7 +97,7 @@ namespace Virus
                     case UsbProgram.Program.DDOS: //fire particles
                         break;
                     case UsbProgram.Program.PhishingAttack: // All the fish
-                        m_Time = 0.25f;
+                        m_Time = 0.1f;
                         Vector3 t_pos = m_FishSpawn.transform.position;
                         t_pos.z +=  UnityEngine.Random.Range(-1.0f, 1.0f);
                         Instantiate(m_Particles[2], t_pos, Quaternion.identity);

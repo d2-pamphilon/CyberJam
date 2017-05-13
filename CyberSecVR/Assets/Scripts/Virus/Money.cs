@@ -19,7 +19,7 @@ namespace Virus
             transform.rotation = Random.rotation;
             m_MoneyRB = GetComponent<Rigidbody>();
 
-            m_TimerDestroy = 10.0f;
+            m_TimerDestroy = 5.0f;
         }
 
         // Update is called once per frame
