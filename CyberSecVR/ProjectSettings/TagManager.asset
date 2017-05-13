@@ -11,6 +11,7 @@ TagManager:
   - Brainy
   - USB
   - rightHand
+  - DartTarget
   layers:
   - Default
   - TransparentFX
