@@ -4,20 +4,20 @@ using UnityEngine;
 
 namespace Virus
 {
-    public class Money : MonoBehaviour
+    public class Fish : MonoBehaviour
     {
 
-        public float m_Timer;
+        private float m_Timer;
         public float m_TimerDestroy;
 
-        public Rigidbody m_MoneyRB;
+        public Rigidbody m_FishRB;
 
 
         // Use this for initialization
         void Start()
         {
             transform.rotation = Random.rotation;
-            m_MoneyRB = GetComponent<Rigidbody>();
+            m_FishRB = GetComponent<Rigidbody>();
 
             m_TimerDestroy = 10.0f;
         }
@@ -30,8 +30,6 @@ namespace Virus
             {
                 ByeBye();
             }
-
-            m_MoneyRB.AddForce(Random.insideUnitSphere * 1);
         }
 
         public void ByeBye()

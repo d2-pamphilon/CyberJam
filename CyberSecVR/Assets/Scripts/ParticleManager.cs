@@ -125,6 +125,48 @@ namespace Virus
                     Instantiate(m_Particles[1], transform.position, Quaternion.identity);//Worms everywhere
                     break;
 
+            m_Timer += Time.deltaTime;
+            if (m_Timer >= m_Time)
+            {
+                switch (m_ProgVirus)
+                {
+                    case UsbProgram.Program.NONE:
+                        break;
+                    //case UsbProgram.Program.BackDoor:
+                    //    break;
+                    //case UsbProgram.Program.BruteForce:
+                    //    break;
+                    //case UsbProgram.Program.DNS:
+                      //  break;
+                    case UsbProgram.Program.DDOS: //fire particles
+                        break;
+                    case UsbProgram.Program.PhishingAttack: // All the fish
+                        m_Time = 0.25f;
+                        Vector3 t_pos = m_FishSpawn.transform.position;
+                        t_pos.z +=  UnityEngine.Random.Range(-1.0f, 1.0f);
+                        Instantiate(m_Particles[2], t_pos, Quaternion.identity);
+                        break;
+                    case UsbProgram.Program.KeyLogger: // UI Text says no
+                        break;
+                    //case UsbProgram.Program.MIM:
+                       // break;
+                    case UsbProgram.Program.RansomVirus: //Money
+                        m_Time = 0.5f;
+                        Instantiate(m_Particles[3], transform.position, Quaternion.identity);
+                        break;
+                    case UsbProgram.Program.RogueSoftware: //Tia Fighter
+                        break;
+                    case UsbProgram.Program.TrojanHorse: //Arrow fired into the PC
+                        m_Time = 1.5f;                        
+                        Instantiate(m_Particles[0], RandLoc(), Quaternion.LookRotation(transform.position));
+                        break;
+                    case UsbProgram.Program.Worms:
+                        m_Time = 0.5f;
+                        Instantiate(m_Particles[1], transform.position, Quaternion.identity);//Worms everywhere
+                        break;
+
+                }
+                m_Timer = 0.0f;
             }
 
             m_ProgVirus = UsbProgram.Program.NONE;
