@@ -100,7 +100,6 @@ GameObject:
   - component: {fileID: 4211666638337028}
   - component: {fileID: 54841724667826276}
   - component: {fileID: 114802968271552212}
-  - component: {fileID: 114745796531368798}
   m_Layer: 0
   m_Name: Banana
   m_TagString: Untagged
@@ -343,20 +342,6 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
---- !u!114 &114745796531368798
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1814638621576860}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: af499cd9cd6135643b406ecc806d8a53, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Rigidbody: {fileID: 0}
-  Item: {fileID: 0}
-  IsAttached: 0
 --- !u!114 &114802968271552212
 MonoBehaviour:
   m_ObjectHideFlags: 1

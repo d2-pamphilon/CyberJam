@@ -23,7 +23,6 @@ GameObject:
   - component: {fileID: 65727233587997822}
   - component: {fileID: 23056515590675584}
   - component: {fileID: 114726157287801332}
-  - component: {fileID: 114179610250462894}
   - component: {fileID: 54238289539844764}
   m_Layer: 0
   m_Name: ChessBoard
@@ -38,8 +37,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1356650930605376}
-  m_LocalRotation: {x: 0.00000010373222, y: -0.15934785, z: -0.000000107170024, w: 0.9872225}
-  m_LocalPosition: {x: -1.2225715, y: 1.0479233, z: -0.39379334}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -1.1668676, y: 0.99211687, z: 0.026786026}
   m_LocalScale: {x: 0.4, y: 0.01, z: 0.4}
   m_Children: []
   m_Father: {fileID: 0}
@@ -110,20 +109,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1.3900509, z: 1}
   m_Center: {x: -0.0000009880977, y: 0.19507408, z: -0.00000014223846}
---- !u!114 &114179610250462894
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1356650930605376}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: af499cd9cd6135643b406ecc806d8a53, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Rigidbody: {fileID: 54238289539844764}
-  Item: {fileID: 114726157287801332}
-  IsAttached: 0
 --- !u!114 &114726157287801332
 MonoBehaviour:
   m_ObjectHideFlags: 1

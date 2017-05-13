@@ -13,4 +13,14 @@ public class ObjectInputCombiner : MonoBehaviour {
 			Destroy(other.gameObject);
 		}
 	}
+
+    void OnTriggerEnter(Collider other)
+    {
+        CombinableObject cObj = other.gameObject.GetComponentInChildren<CombinableObject>();
+        if (cObj)
+        {
+            GetComponentInParent<Blender>().addObject(cObj.type);
+            Destroy(other.gameObject);
+        }
+    }
 }

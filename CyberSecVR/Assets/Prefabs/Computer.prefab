@@ -89,6 +89,7 @@ GameObject:
   - component: {fileID: 4052821277393558}
   - component: {fileID: 33921838133916332}
   - component: {fileID: 23588907292217106}
+  - component: {fileID: 64814370596684546}
   m_Layer: 0
   m_Name: Layer0_001
   m_TagString: Untagged
@@ -107,6 +108,7 @@ GameObject:
   - component: {fileID: 33712982743370354}
   - component: {fileID: 65363684730335250}
   - component: {fileID: 23055396655824244}
+  - component: {fileID: 65499245302328664}
   m_Layer: 0
   m_Name: Screen
   m_TagString: Untagged
@@ -187,7 +189,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1058186002121040}
   m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: -1.01, y: 1.0429239, z: 0.454}
+  m_LocalPosition: {x: -1.0405052, y: 1.0429239, z: 0.50368077}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4052821277393558}
@@ -312,6 +314,20 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1892209961399232}
   m_Mesh: {fileID: 4300000, guid: ddaadc44c9c0fd840a533376060b2a1d, type: 3}
+--- !u!64 &64814370596684546
+MeshCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1892209961399232}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Convex: 1
+  m_InflateMesh: 0
+  m_SkinWidth: 0.01
+  m_Mesh: {fileID: 4300000, guid: ddaadc44c9c0fd840a533376060b2a1d, type: 3}
 --- !u!65 &65030175257927878
 BoxCollider:
   m_ObjectHideFlags: 1
@@ -336,6 +352,18 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!65 &65499245302328664
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1906852460427296}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.0000002, y: 1, z: 1.0000002}
+  m_Center: {x: 0.00000011920929, y: 0.00000047683716, z: -0.000015258789}
 --- !u!65 &65983681385234104
 BoxCollider:
   m_ObjectHideFlags: 1
@@ -401,12 +429,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8020c53bbe82c5c4088c7e6ceb7f4d66, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Type: 1
   m_Particles:
-  - {fileID: 1582989800809728, guid: 9ec3b5526992f644a9d514822e9636c5, type: 2}
-  - {fileID: 1884910563005326, guid: 2b2c36732494aa44fa8159d726eba45f, type: 2}
+  - {fileID: 1582989800809728, guid: 27c272852d301b14798582fd57dfea85, type: 2}
   - {fileID: 1706313161001616, guid: ac65d879f8003e346a744eeb38b26d80, type: 2}
+  - {fileID: 1884910563005326, guid: 2b2c36732494aa44fa8159d726eba45f, type: 2}
   m_SphereSize: 0
   m_FishSpawn: {fileID: 1172370818598412}
+  m_comCon: {fileID: 0}
   m_program: {fileID: 0}
   m_ProgVirus: 0

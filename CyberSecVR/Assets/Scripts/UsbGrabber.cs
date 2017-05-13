@@ -15,6 +15,8 @@ public class UsbGrabber : MonoBehaviour {
             other.gameObject.transform.position = transform.FindChild("USB WAYPOINT").transform.position;
             other.gameObject.transform.rotation = transform.FindChild("USB WAYPOINT").transform.rotation;
 
+            GetComponentInParent<ComputerController>().runProgram();
+
             other.GetComponent<Rigidbody>().velocity = Vector3.zero;
         }
     }

@@ -303,9 +303,9 @@ namespace NewtonVR
                         PickupClosest();
                     }
                 }
-                else if (HoldButtonUp == true && CurrentlyInteracting != null)
+                else if (!HoldButtonPressed && CurrentlyInteracting != null)
                 {
-                    EndInteraction(null);
+                    EndInteraction(CurrentlyInteracting);
                 }
             }
             else if (CurrentInteractionStyle == InterationStyle.Toggle)

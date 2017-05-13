@@ -96,7 +96,6 @@ GameObject:
   - component: {fileID: 23622981443785080}
   - component: {fileID: 114391584254810454}
   - component: {fileID: 54252333690307250}
-  - component: {fileID: 114352273829196788}
   m_Layer: 0
   m_Name: Movable
   m_TagString: Untagged
@@ -117,7 +116,6 @@ GameObject:
   - component: {fileID: 23574207454024992}
   - component: {fileID: 114093369279312214}
   - component: {fileID: 54924679562037570}
-  - component: {fileID: 114771563815784312}
   m_Layer: 0
   m_Name: Movable
   m_TagString: Untagged
@@ -252,7 +250,6 @@ GameObject:
   - component: {fileID: 23682257769129284}
   - component: {fileID: 114623529655101210}
   - component: {fileID: 54420653800654836}
-  - component: {fileID: 114590070947820298}
   m_Layer: 0
   m_Name: Movable
   m_TagString: Untagged
@@ -717,7 +714,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1513639046673126}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.6447309, y: 0.4558658, z: -4.2814527}
+  m_LocalPosition: {x: -0.196, y: 0.417, z: -4.2814527}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4254308542808030}
@@ -1965,30 +1962,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e7002c2ae7e1c4f47b35de6507d660e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  newObjWaypoint: {fileID: 1373349916712996}
-  SpawnButton: {fileID: 114590070947820298}
-  previewMat: {fileID: 2100000, guid: cc41eb5f42bc1e04a89606a3c9594a34, type: 2}
---- !u!114 &114352273829196788
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1149181339169694}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 098f43d4119018045abd8f78a899d48d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  SpawnButton: {fileID: 114590070947820298}
-  newObjWaypoint: {fileID: 0}
+  SpawnButton: {fileID: 114623529655101210}
+  IncreaseButton: {fileID: 114391584254810454}
+  DecreaseButton: {fileID: 114093369279312214}
   Printables:
-  - {fileID: 1081367111366098, guid: 4ccab9ef609ce6a49b207d33055c32ec, type: 2}
   - {fileID: 1081059161884566, guid: ac603292e6b17c245b09685c59ee8970, type: 2}
+  - {fileID: 1081367111366098, guid: 4ccab9ef609ce6a49b207d33055c32ec, type: 2}
+  - {fileID: 1102388765045696, guid: 274d1cac678e2c94da18dfac7a8b9c1c, type: 2}
   - {fileID: 1814638621576860, guid: 609c8705e520a44edb2393fb3c31da2f, type: 2}
-  increaseList: 1
-  isPrintButton: 0
+  - {fileID: 1866032145235598, guid: ee601a14600a72542ac5fed55966eb31, type: 2}
+  - {fileID: 1943506109111358, guid: 158c155bb7dca48c98edd8c95fe538fd, type: 2}
+  - {fileID: 1564061129664872, guid: 809689ff3813ed0478c2419e6dbf8ffd, type: 2}
+  newObjWaypoint: {fileID: 1373349916712996}
   currentNum: 0
-  currPrintable: {fileID: 0}
+  previewMat: {fileID: 2100000, guid: cc41eb5f42bc1e04a89606a3c9594a34, type: 2}
 --- !u!114 &114391584254810454
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2006,29 +1993,6 @@ MonoBehaviour:
   ButtonUp: 0
   ButtonIsPushed: 0
   ButtonWasPushed: 0
---- !u!114 &114590070947820298
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1498873034523742}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 098f43d4119018045abd8f78a899d48d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  SpawnButton: {fileID: 0}
-  newObjWaypoint: {fileID: 1373349916712996}
-  Printables:
-  - {fileID: 1081367111366098, guid: 4ccab9ef609ce6a49b207d33055c32ec, type: 2}
-  - {fileID: 1081059161884566, guid: ac603292e6b17c245b09685c59ee8970, type: 2}
-  - {fileID: 1814638621576860, guid: 609c8705e520a44edb2393fb3c31da2f, type: 2}
-  - {fileID: 1205914258721928, guid: 545c65f314a413c49981d56d935247c2, type: 2}
-  increaseList: 0
-  isPrintButton: 1
-  currentNum: 0
-  currPrintable: {fileID: 1081367111366098, guid: 4ccab9ef609ce6a49b207d33055c32ec,
-    type: 2}
 --- !u!114 &114623529655101210
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2046,24 +2010,3 @@ MonoBehaviour:
   ButtonUp: 0
   ButtonIsPushed: 0
   ButtonWasPushed: 0
---- !u!114 &114771563815784312
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1226594571902162}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 098f43d4119018045abd8f78a899d48d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  SpawnButton: {fileID: 114590070947820298}
-  newObjWaypoint: {fileID: 0}
-  Printables:
-  - {fileID: 1081367111366098, guid: 4ccab9ef609ce6a49b207d33055c32ec, type: 2}
-  - {fileID: 1081059161884566, guid: ac603292e6b17c245b09685c59ee8970, type: 2}
-  - {fileID: 1814638621576860, guid: 609c8705e520a44edb2393fb3c31da2f, type: 2}
-  increaseList: 0
-  isPrintButton: 0
-  currentNum: 0
-  currPrintable: {fileID: 0}

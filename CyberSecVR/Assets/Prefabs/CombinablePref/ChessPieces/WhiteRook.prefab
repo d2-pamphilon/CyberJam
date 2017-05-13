@@ -22,7 +22,6 @@ GameObject:
   - component: {fileID: 65778990612052366}
   - component: {fileID: 114765680033203032}
   - component: {fileID: 54649006717325074}
-  - component: {fileID: 114681069678424776}
   m_Layer: 0
   m_Name: WhiteRook
   m_TagString: Untagged
@@ -139,20 +138,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 15.9810095, y: 31.941044, z: 15.74884}
   m_Center: {x: 0.014507771, y: 15.470523, z: -0.0007480383}
---- !u!114 &114681069678424776
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1471666884291474}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: af499cd9cd6135643b406ecc806d8a53, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Rigidbody: {fileID: 54649006717325074}
-  Item: {fileID: 114765680033203032}
-  IsAttached: 0
 --- !u!114 &114765680033203032
 MonoBehaviour:
   m_ObjectHideFlags: 1

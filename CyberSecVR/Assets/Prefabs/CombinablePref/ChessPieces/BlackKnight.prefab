@@ -39,7 +39,6 @@ GameObject:
   - component: {fileID: 65979247010930584}
   - component: {fileID: 114193251895439228}
   - component: {fileID: 54917098427798508}
-  - component: {fileID: 114380645353275754}
   m_Layer: 0
   m_Name: BlackKnight
   m_TagString: Untagged
@@ -183,17 +182,3 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
       PublicKeyToken=null
---- !u!114 &114380645353275754
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1929379652307620}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: af499cd9cd6135643b406ecc806d8a53, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Rigidbody: {fileID: 54917098427798508}
-  Item: {fileID: 114193251895439228}
-  IsAttached: 0

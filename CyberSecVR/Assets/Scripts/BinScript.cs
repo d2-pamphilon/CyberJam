@@ -4,11 +4,19 @@ using UnityEngine;
 
 public class BinScript : MonoBehaviour {
 
-	void OnCollisionEnter(Collision col)
+	void OnTriggerStay(Collider col)
 	{
         if (col.gameObject.GetComponent<CombinableObject>())
         {
             Destroy(col.gameObject);
         }
-	}
+        else if (col.gameObject.GetComponentInChildren<CombinableObject>())
+        {
+            Destroy(col.gameObject);
+        }
+        else if (col.gameObject.GetComponentInParent<CombinableObject>())
+        {
+            Destroy(col.gameObject);
+        }
+    }
 }

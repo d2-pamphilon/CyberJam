@@ -22,7 +22,6 @@ GameObject:
   - component: {fileID: 65584310333514800}
   - component: {fileID: 114186667813063292}
   - component: {fileID: 54819852968373668}
-  - component: {fileID: 114293875150591628}
   m_Layer: 0
   m_Name: BlackBishop
   m_TagString: Untagged
@@ -183,17 +182,3 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
       PublicKeyToken=null
---- !u!114 &114293875150591628
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1689643716543762}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: af499cd9cd6135643b406ecc806d8a53, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Rigidbody: {fileID: 54819852968373668}
-  Item: {fileID: 114186667813063292}
-  IsAttached: 0
