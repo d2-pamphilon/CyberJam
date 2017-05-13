@@ -6,23 +6,41 @@ using UnityEngine.AI;
 public class ScientistController : MonoBehaviour
 {
 
+    enum state
+    {
+        partoling,
+        gettingUsb,
+        seekingPC
+    }
+
+    public float usbPlaceDist;
     [SerializeField]
     List<GameObject> waypoints;
     int currentWaypoint;
     private GameObject m_usbToGrab;
-    [SerializeField]
-    private bool m_seesUSB;
+    //[SerializeField]
+    //private bool m_seesUSB;
     private NavMeshAgent m_navMesh;
     [SerializeField]
-    private bool m_parented;
+    // private bool m_parented;
     public float m_lookRadius;
 
     private GameObject t_hand;
+
+    public GameObject[] usbSlots;
+    [SerializeField]
+    private state movmentState;
+    private bool foundslot;
+
+    private Transform usbWaypoint;
     // Use this for initialization
     void Start()
     {
-        m_seesUSB = false;
-        m_parented = false;
+        foundslot = false;
+        movmentState = state.partoling;
+        // m_seesUSB = false;
+        //  m_parented = false;
+
         m_navMesh = GetComponent<NavMeshAgent>();
         t_hand = GameObject.FindGameObjectWithTag("rightHand");
     }
@@ -30,57 +48,84 @@ public class ScientistController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
+
         GetComponent<Animator>().SetFloat("Speed", GetComponent<Rigidbody>().velocity.magnitude);
-        if (!m_parented)
-        {
-            Collider[] hitColliders = Physics.OverlapSphere(transform.position, m_lookRadius);
 
-            foreach (Collider C in hitColliders)
-            {
-                if (C.gameObject.tag == "USB")
+        switch (movmentState)
+        {
+            case state.partoling:
+                if (Vector3.Distance(transform.position, waypoints[currentWaypoint].transform.position) < 1.0f)
                 {
-                    m_usbToGrab = C.gameObject;
-                    m_seesUSB = true;
-                    break;
+                    currentWaypoint = currentWaypoint < waypoints.Count - 1 ? currentWaypoint + 1 : 0;
                 }
-            }
+                m_navMesh.destination = waypoints[currentWaypoint].transform.position;
 
+                Collider[] hitColliders = Physics.OverlapSphere(transform.position, m_lookRadius);
 
-        }
+                foreach (Collider C in hitColliders)
+                {
+                    if (C.gameObject.tag == "USB" && C.gameObject.GetComponent<UsbProgram>().inSlot == false)
+                    {
 
-        if (m_seesUSB)
-        {
-            m_navMesh.destination = m_usbToGrab.transform.position;
-            float dist = Vector3.Distance(m_usbToGrab.transform.position, transform.position);
-            if (dist <= 2.0f)
-            {
-                m_seesUSB = false;
-                m_parented = true;
+                        m_usbToGrab = C.gameObject;
+                        movmentState = state.gettingUsb;
+                        break;
+                    }
+                }
+                break;
+            case state.gettingUsb:
 
+                m_navMesh.destination = m_usbToGrab.transform.position;
+
+                float dist = Vector3.Distance(m_usbToGrab.transform.position, transform.position);
+
+                if (dist <= 0.5f)
+                {
+                    // m_seesUSB = false;
+                    //m_parented = true;
+
+                    m_usbToGrab.transform.position = t_hand.transform.position;
+                    m_usbToGrab.transform.rotation = Quaternion.Euler(0, 0, -90);
+                    m_usbToGrab.transform.localScale = new Vector3(0.1f, 0.1f, 0.1f);
+                    m_usbToGrab.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeRotation;
+                    movmentState = state.seekingPC;
+                    foundslot = false;
+                }
+
+                break;
+            case state.seekingPC:
+                if (!foundslot)
+                {
+                    foreach (GameObject G in usbSlots)
+                    {
+                        if (G.gameObject.GetComponent<UsbGrabber>().free == true)
+                        {
+                            usbWaypoint = G.gameObject.transform;
+                            foundslot = true;
+                            break;
+                        }
+                    }
+                }
+
+                m_navMesh.destination = usbWaypoint.position;
                 m_usbToGrab.transform.position = t_hand.transform.position;
-                m_usbToGrab.transform.rotation = Quaternion.Euler(0, 0, -90);
-                m_usbToGrab.transform.localScale = new Vector3(0.1f,0.1f ,0.1f);
-                m_usbToGrab.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeRotation;
+                float distance = Vector3.Distance(usbWaypoint.position, transform.position);
 
-            }
-        }
-        else
-        {
-            if (Vector3.Distance(transform.position, waypoints[currentWaypoint].transform.position) < 1.0f)
-            {
-                currentWaypoint = currentWaypoint < waypoints.Count - 1 ? currentWaypoint + 1 : 0;
-            }
-            m_navMesh.destination = waypoints[currentWaypoint].transform.position;
+                if (distance <= usbPlaceDist)
+                {
+                    m_usbToGrab.transform.localScale = new Vector3(0.023f, 0.023f, 0.023f);
+                    m_usbToGrab.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.None;
+                    m_usbToGrab.transform.position = usbWaypoint.position;// += new Vector3(0f, 0.1f, 0f);
 
-            if (m_parented)
-            {
-                m_usbToGrab.transform.position = t_hand.transform.position;
-
-            }
+                    movmentState = state.partoling;
+                }
+                break;
 
         }
-
-
-
     }
+
+
+
+
 }

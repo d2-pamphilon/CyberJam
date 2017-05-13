@@ -2,9 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class UsbGrabber : MonoBehaviour {
+public class UsbGrabber : MonoBehaviour
+{
 
     public GameObject usb;
+    public bool free = true;
 
 
     void OnTriggerEnter(Collider other)
@@ -18,6 +20,20 @@ public class UsbGrabber : MonoBehaviour {
             GetComponentInParent<ComputerController>().runProgram();
 
             other.GetComponent<Rigidbody>().velocity = Vector3.zero;
+            other.GetComponent<UsbProgram>().inSlot = true;
+            free = false;
         }
     }
+
+    void OnTriggerExit(Collider other)
+    {
+        if (other.GetComponent<UsbProgram>())
+        {
+            other.gameObject.GetComponent<UsbProgram>().inSlot = false;
+            free = true;
+            GetComponentInParent<ComputerController>().exitProgram();
+        }
+
+    }
+
 }

@@ -15,4 +15,9 @@ public class ComputerController : MonoBehaviour {
         GetComponent<Virus.ParticleManager>().m_ProgVirus = UsbPort.GetComponent<UsbGrabber>().usb.GetComponent<UsbProgram>().program;
         UsbPort.GetComponent<UsbGrabber>().usb.GetComponent<UsbProgram>().play(screen);
     }
+
+    public void exitProgram()
+    {
+        GetComponentInChildren<ComputerScreen.ComputerScreen>().m_virus = UsbProgram.Program.NONE;
+    }
 }
