@@ -530,11 +530,7 @@ MonoBehaviour:
   m_Particles:
   - {fileID: 1582989800809728, guid: 27c272852d301b14798582fd57dfea85, type: 2}
   - {fileID: 1706313161001616, guid: ac65d879f8003e346a744eeb38b26d80, type: 2}
-<<<<<<< HEAD
-  - {fileID: 1081059161884566, guid: ac603292e6b17c245b09685c59ee8970, type: 2}
-=======
   - {fileID: 0}
->>>>>>> origin/master
   m_SphereSize: 0
   m_FishSpawn: {fileID: 1172370818598412}
   m_comCon: {fileID: 0}
