@@ -22,6 +22,7 @@ GameObject:
   - component: {fileID: 65847881441468992}
   - component: {fileID: 114349400487112926}
   - component: {fileID: 54982068084407492}
+  - component: {fileID: 114794393376300664}
   m_Layer: 0
   m_Name: WhitePawn
   m_TagString: Untagged
@@ -182,3 +183,15 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
       PublicKeyToken=null
+--- !u!114 &114794393376300664
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1474419654869028}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 818565fd2e97f483996093187b1a8e24, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  type: 0

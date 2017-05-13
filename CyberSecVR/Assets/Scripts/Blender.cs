@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using NewtonVR;
 
 public class Blender : MonoBehaviour {
 
@@ -34,19 +35,23 @@ public class Blender : MonoBehaviour {
         KnightPieceChess
 	}
 
+    [SerializeField]
+    NVRLever activationLever;
+
+    [SerializeField]
+    GameObject USBObject;
+
 	[System.Serializable]
 	public struct objectPairWithOutput
 	{
 		public List<CombinableObjectType> collectedObjects;
-		public GameObject output;
+		public UsbProgram.Program output;
 	}
 
 	List<CombinableObjectType> collectedObjects;
 
 	[SerializeField]
 	List<objectPairWithOutput> outputs = new List<objectPairWithOutput>();
-
-    //public int hello;
 
     // Use this for initialization
     void Start () {
@@ -55,22 +60,30 @@ public class Blender : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		
+        if (activationLever.CurrentLeverPosition == NVRLever.LeverPosition.On
+            && activationLever.LastLeverPosition != NVRLever.LeverPosition.On)
+        {
+            activate();
+        }
 	}
+
+    public void activate()
+    {
+        GetComponentInChildren<ObjectInputCombiner>().activate();
+        if (collectedObjects.Count >= 2)
+        {
+            GameObject newGO = canObjectsCombine();
+            if (newGO)
+            {
+                newGO.transform.position = transform.FindChild("OutputPoint").transform.position;
+            }
+        }
+        collectedObjects.Clear();
+    }
 
 	public void addObject(CombinableObjectType objType)
 	{
-		collectedObjects.Add(objType);
-		if (collectedObjects.Count >= 2)
-		{
-			GameObject newGO = canObjectsCombine();
-			if (newGO)
-			{
-				GameObject instance = Instantiate(newGO);
-				instance.transform.position = transform.FindChild("OutputPoint").transform.position;
-				collectedObjects.Clear();
-			}
-		}
+        collectedObjects.Add(objType);
 	}
 
 
@@ -91,7 +104,9 @@ public class Blender : MonoBehaviour {
             }
 			if (sameCount == collectedObjects.Count)
 			{
-				return outputs[i].output;
+                GameObject usb = Instantiate(USBObject);
+                usb.GetComponent<UsbProgram>().program = outputs[i].output;
+                return usb;
 			}
 		}
 		return null;
