@@ -70,11 +70,22 @@ namespace Virus
         public Vector3 RandLoc()
         {
             Vector3 m_randLoc;
+            while(true)
+            {
+                m_randLoc = UnityEngine.Random.onUnitSphere * m_SphereSize;
 
-            m_randLoc = UnityEngine.Random.onUnitSphere * m_SphereSize;
-
-
-            return m_randLoc;
+                if (m_randLoc.x >= 0.0f && m_randLoc.x <= m_SphereSize)
+                {
+                    if (m_randLoc.y >= -m_SphereSize && m_randLoc.y <= 0.0f)
+                    {
+                        if (m_randLoc.z >= 0.0f && m_randLoc.z <= m_SphereSize)
+                        {
+                            print(m_randLoc);
+                            return m_randLoc;
+                        }
+                    }
+                }
+            }
         }
 
         private void fishspawner()
@@ -86,23 +97,29 @@ namespace Virus
                 GameObject t_fishParticle;
                 t_fishParticle = (GameObject)Instantiate(m_Particles[2], t_pos, Quaternion.identity);
                 Destroy(t_fishParticle, 5f);
-
             }
 
         }
 
         private void DartSpawner()
         {
-            for (int i = 0; i < 30; i++)
+            for (int i = 0; i < 10; i++)
             {
                 Vector3 m_Pos = RandLoc();
                 GameObject m_Dart;
                 m_Dart = (GameObject)Instantiate(m_Particles[0], m_Pos, Quaternion.identity);
-                Destroy(m_Dart, 2.5f);
+                Destroy(m_Dart, 4f);
             }
         }
 
-    }
+        public float RandFloat(float _min, float _max)
+        {
+            float m_val = UnityEngine.Random.Range(_min, _max);
+
+            return m_val;
+
+        }
+}
 
 
 

@@ -27,6 +27,7 @@ namespace ComputerScreen
         // Update is called once per frame
         void Update()
         {
+           
             // if (m_virus == UsbProgram.Program.PhishingAttack)
             if ( m_virus != UsbProgram.Program.NONE)
             {
