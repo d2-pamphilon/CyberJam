@@ -231,6 +231,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4925463462852584}
   - component: {fileID: 137680375206069316}
+  - component: {fileID: 64260627407947044}
   m_Layer: 0
   m_Name: Box01
   m_TagString: Untagged
@@ -246,6 +247,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4325157350063560}
+  - component: {fileID: 64551623589290076}
   m_Layer: 0
   m_Name: Bone01
   m_TagString: Untagged
@@ -738,6 +740,34 @@ Transform:
   m_Father: {fileID: 4439747995993544}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!64 &64260627407947044
+MeshCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1655702511032028}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Convex: 1
+  m_InflateMesh: 0
+  m_SkinWidth: 0.01
+  m_Mesh: {fileID: 0}
+--- !u!64 &64551623589290076
+MeshCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1665228546363258}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Convex: 0
+  m_InflateMesh: 0
+  m_SkinWidth: 0.01
+  m_Mesh: {fileID: 0}
 --- !u!95 &95279566207755988
 Animator:
   serializedVersion: 3

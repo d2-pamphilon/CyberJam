@@ -20,6 +20,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4758219246172732}
   - component: {fileID: 95221985633764234}
+  - component: {fileID: 64809155147466888}
   m_Layer: 0
   m_Name: closed handright
   m_TagString: Untagged
@@ -739,6 +740,20 @@ Transform:
   m_Father: {fileID: 4006470639492840}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!64 &64809155147466888
+MeshCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1097909450643546}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Convex: 1
+  m_InflateMesh: 0
+  m_SkinWidth: 0.01
+  m_Mesh: {fileID: 0}
 --- !u!95 &95221985633764234
 Animator:
   serializedVersion: 3
