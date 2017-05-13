@@ -1786,11 +1786,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   activationLever: {fileID: 114518265381325726}
+  USBObject: {fileID: 1039911112015404, guid: e64bec5d54b51de49aa61d3b13850a47, type: 2}
   outputs:
   - collectedObjects: 0700000001000000
-    output: {fileID: 1039911112015404, guid: e64bec5d54b51de49aa61d3b13850a47, type: 2}
+    output: 1
   - collectedObjects: 0300000001000000
-    output: {fileID: 1702011441240588, guid: 73d877fb792bc364ba3a6a0a579b590e, type: 2}
+    output: 5
 --- !u!114 &114518265381325726
 MonoBehaviour:
   m_ObjectHideFlags: 1

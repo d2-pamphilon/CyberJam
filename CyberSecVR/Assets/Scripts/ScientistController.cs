@@ -52,7 +52,7 @@ public class ScientistController : MonoBehaviour
         {
             m_navMesh.destination = m_usbToGrab.transform.position;
             float dist = Vector3.Distance(m_usbToGrab.transform.position, transform.position);
-            if (dist <= 0.2f)
+            if (dist <= 2.0f)
             {
                 m_seesUSB = false;
                 m_parented = true;
