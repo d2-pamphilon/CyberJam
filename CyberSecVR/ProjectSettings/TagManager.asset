@@ -6,6 +6,11 @@ TagManager:
   tags:
   - projectile
   - FxTemporaire
+  - Electro
+  - Burnt
+  - Brainy
+  - USB
+  - rightHand
   layers:
   - Default
   - TransparentFX
