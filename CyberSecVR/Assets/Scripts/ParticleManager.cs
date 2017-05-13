@@ -11,32 +11,13 @@ namespace Virus
 
         public List<GameObject> m_Particles;
 
-        public int m_SphereSize;
-
-
-        [SerializeField]
-        ComputerController m_comCon;
-        public UsbProgram m_program;
         public UsbProgram.Program m_ProgVirus;
-        private float m_Timer;
-        private float m_Time;
-        private float m_TimerDuration;
 
-        private int fishCounter = 1;
-
-
+        public int m_SphereSize;
         // Use this for initialization
         void Start()
         {
-
-            m_Time = 0;
-
-            m_SphereSize = 10;
-
-            m_comCon = GetComponent<ComputerController>();
-            m_program = m_comCon.GetComponent<UsbProgram>();
-
-
+            m_SphereSize = 2;
         }
 
 
@@ -68,17 +49,16 @@ namespace Virus
                 //case UsbProgram.Program.MIM:
                 // break;
                 case UsbProgram.Program.RansomVirus: //Money
-                    m_Time = 0.5f;
                     Instantiate(m_Particles[3], transform.position, Quaternion.identity);
                     break;
                 case UsbProgram.Program.RogueSoftware: //Tia Fighter
                     break;
                 case UsbProgram.Program.TrojanHorse: //Arrow fired into the PC
-                    m_Time = 1.5f;
+
                     DartSpawner();
                     break;
                 case UsbProgram.Program.Worms:
-                    m_Time = 0.5f;
+
                     Instantiate(m_Particles[1], transform.position, Quaternion.identity);//Worms everywhere
                     break;
 
@@ -113,12 +93,12 @@ namespace Virus
 
         private void DartSpawner()
         {
-            for (int i = 0; i < 10; i++)
+            for (int i = 0; i < 30; i++)
             {
                 Vector3 m_Pos = RandLoc();
                 GameObject m_Dart;
-                m_Dart  = (GameObject)Instantiate(m_Particles[0], m_Pos, Quaternion.identity);
-                Destroy(m_Dart, 5f);
+                m_Dart = (GameObject)Instantiate(m_Particles[0], m_Pos, Quaternion.identity);
+                Destroy(m_Dart, 2.5f);
             }
         }
 

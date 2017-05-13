@@ -9,9 +9,6 @@ namespace ComputerScreen
 
         public UsbProgram.Program m_virus;
 
-        private MeshRenderer m_Renderscreen;
-
-        public List<Material> m_ScreenMat;
         public List<Sprite> m_sprites;
 
         private Canvas m_Canvas;
@@ -21,7 +18,7 @@ namespace ComputerScreen
         void Start()
         {
             m_virus = UsbProgram.Program.NONE;
-            m_Renderscreen = GetComponent<MeshRenderer>();
+
             m_Canvas = GetComponentInChildren<Canvas>();
             m_Image = GetComponentInChildren<UnityEngine.UI.Image>();
 
@@ -31,10 +28,15 @@ namespace ComputerScreen
         void Update()
         {
             // if (m_virus == UsbProgram.Program.PhishingAttack)
+            if ( m_virus != UsbProgram.Program.NONE)
+            {
+                m_Image.color = Color.white;
+            }
           
             switch (m_virus)
             {
                 case UsbProgram.Program.PhishingAttack:
+                    
                     m_Canvas.enabled = true;
                     m_Image.sprite = m_sprites[0];
                     break;
@@ -42,8 +44,13 @@ namespace ComputerScreen
                     m_Canvas.enabled = true;
                     m_Image.sprite = m_sprites[1];
                     break;
+                case UsbProgram.Program.Worms:
+                    m_Canvas.enabled = true;
+                    m_Image.sprite = m_sprites[2];
+                    break;
                 default:
                     m_Canvas.enabled = false;
+                    m_Image.color = Color.black;
                     break;
             }
         }

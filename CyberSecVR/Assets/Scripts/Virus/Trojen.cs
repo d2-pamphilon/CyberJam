@@ -7,63 +7,26 @@ namespace Virus
 
     public class Trojen : MonoBehaviour
     {
-        public float m_Timer;
-        public float m_TimeStart;
-        public float m_TimerDestroy;
-        public bool m_MoveArrow;
+        public Transform m_target;
+        private float m_speed;
 
-        public Rigidbody m_ArrowRb;
-        //public GameObject m_Target;
-        // Use this for initialization
+
         void Start()
         {
-            m_TimeStart = Random.Range(2, 5);
-            m_TimerDestroy = 10.0f;
-            m_Timer = 0.0f;
-
-            m_MoveArrow = false;
-           // gameObject.transform.LookAt(m_Target.transform);
-
-            m_ArrowRb = GetComponent<Rigidbody>();
-            m_ArrowRb.useGravity = false;
+            GameObject m_GM =  GameObject.FindGameObjectWithTag("DartTarget");
+            m_target = m_GM.transform;
+            transform.LookAt(m_target);
+            m_speed = 5f;
         }
 
         // Update is called once per frame
         void Update()
         {
-            m_Timer += Time.deltaTime;
-
-            if (m_Timer >= m_TimeStart)
-            {
-                m_MoveArrow = true;
-            }
-
-            if (m_MoveArrow)
-            {
-                print("Forward");
-                //move arrow with add force
-                m_ArrowRb.AddForce(Vector3.forward);
-            }
-
-            if (m_Timer >= m_TimerDestroy)
-            {
-                ByeBye();
-            }
+            print("move");
+            float m_step = m_speed * Time.deltaTime;
+            
+            transform.position = Vector3.MoveTowards(transform.position, m_target.position, m_step);
         }
 
-        public void ByeBye()
-        {
-            Destroy(gameObject);
-        }
-
-        private void OnCollisionEnter(Collision collision)
-        {
-            m_ArrowRb.velocity = new Vector3(0, 0, 0);
-            m_MoveArrow = false;
-        }
-
-        //timer
-        //add force
-        //deletion
     }
 }
