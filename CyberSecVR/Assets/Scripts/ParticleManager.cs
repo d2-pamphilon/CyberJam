@@ -99,8 +99,8 @@ namespace Virus
         public Vector3 RandLoc()
         {
             Vector3 m_randLoc;
-            while (true)
-            {
+            //while (true)
+            //{
                 m_randLoc = UnityEngine.Random.onUnitSphere * m_SphereSize;
 
                 //if (m_randLoc.x >= 0.0f && m_randLoc.x <= m_SphereSize)
@@ -114,7 +114,7 @@ namespace Virus
                 //        }
                 //    }
                 //}
-            }
+            //}
         }
 
         public float RandFloat(float _min, float _max)
@@ -135,7 +135,7 @@ namespace Virus
 
                 GameObject t_fishParticle;
                 t_fishParticle = (GameObject)Instantiate(m_Particles[2], t_pos, Quaternion.identity);
-                Destroy(t_fishParticle, 5f);
+             //   Destroy(t_fishParticle, 5f);
             }
 
         }
@@ -165,7 +165,7 @@ namespace Virus
             }
 
 
-            Vector3 t_pos = transform.position += new Vector3(0, 0.1f, 0);
+            Vector3 t_pos = transform.position;// += new Vector3(0, 0.1f, 0);
             GameObject T_box = (GameObject)Instantiate(RansomBox, t_pos, Quaternion.identity, transform);
             // T_box.SetActive(true);
             //if gold collides

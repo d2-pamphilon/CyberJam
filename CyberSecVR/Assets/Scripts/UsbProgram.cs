@@ -17,8 +17,8 @@ public class UsbProgram : MonoBehaviour {
         BackDoor,
         BruteForce,
         DNS,
-        MIM
-
+        MIM,
+        LAST
     }
 
     public Program program;

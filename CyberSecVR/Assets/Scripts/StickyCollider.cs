@@ -4,29 +4,18 @@ using UnityEngine;
 
 public class StickyCollider : MonoBehaviour {
 
-    private bool stuck;
-
-    void Update()
+    public void OnGrabbed()
     {
-
+        FixedJoint[] joints = GetComponents<FixedJoint>();
+        foreach (var joint in joints)
+        {
+            DestroyImmediate(joint);
+        }
     }
 
     void OnCollisionEnter (Collision col)
     {
-        stuck = true;
-        GetComponent<Rigidbody>().useGravity = false;
-        //GetComponent<Rigidbody>().velocity = Vector3.zero;
-    }
-    void OnCollisionStay(Collision col)
-    {
-
-        stuck = true;
-    }
-
-    void OnCollisionExit(Collision col)
-    {
-        stuck = false;
-        GetComponent<Rigidbody>().useGravity = true;
-
+        var joint = gameObject.AddComponent<FixedJoint>();
+        joint.connectedBody = col.rigidbody;
     }
 }
