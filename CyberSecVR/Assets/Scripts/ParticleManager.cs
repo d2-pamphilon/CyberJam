@@ -200,6 +200,7 @@ namespace Virus
         }
         private void Rogue()
         {
+            }
 
         }
         private void MIM()
