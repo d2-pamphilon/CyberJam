@@ -43,7 +43,16 @@ public class ScientistController : MonoBehaviour
         //  m_parented = false;
 
         m_navMesh = GetComponent<NavMeshAgent>();
-        t_hand = GameObject.FindGameObjectWithTag("rightHand");
+
+        foreach (Transform Child in transform)
+        {
+            if (Child.gameObject.tag == "Head")
+            {
+                t_hand = Child.gameObject;
+                break;
+            }
+        }
+       
     }
 
     // Update is called once per frame
@@ -74,7 +83,13 @@ public class ScientistController : MonoBehaviour
                         break;
                     }
                 }
-                break;
+                
+                for(int i=0;i<hitColliders.Length;i++)
+                {
+                    hitColliders[i] = null;
+
+                }
+        break;
             case state.gettingUsb:
 
                 m_navMesh.destination = m_usbToGrab.transform.position;
@@ -103,6 +118,7 @@ public class ScientistController : MonoBehaviour
                         if (G.gameObject.GetComponent<UsbGrabber>().free == true)
                         {
                             usbWaypoint = G.gameObject.transform;
+                            m_usbToGrab.GetComponent<UsbProgram>().inSlot = true;
                             foundslot = true;
                             break;
                         }

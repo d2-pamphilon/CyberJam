@@ -10,8 +10,10 @@ TagManager:
   - Burnt
   - Brainy
   - USB
-  - rightHand
   - DartTarget
+  - Computer
+  - Screen
+  - Head
   layers:
   - Default
   - TransparentFX

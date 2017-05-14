@@ -96,17 +96,17 @@ namespace Virus
             {
                 m_randLoc = UnityEngine.Random.onUnitSphere * m_SphereSize;
 
-                if (m_randLoc.x >= 0.0f && m_randLoc.x <= m_SphereSize)
-                {
-                    if (m_randLoc.y >= -m_SphereSize && m_randLoc.y <= 0.0f)
-                    {
-                        if (m_randLoc.z >= 0.0f && m_randLoc.z <= m_SphereSize)
-                        {
-                            print(m_randLoc);
+                //if (m_randLoc.x >= 0.0f && m_randLoc.x <= m_SphereSize)
+                //{
+                //    if (m_randLoc.y >= 0.0f && m_randLoc.y <= 0.0f)
+                //    {
+                //        if (m_randLoc.z >= -m_SphereSize && m_randLoc.z <= m_SphereSize)
+                //        {
+                //            print(m_randLoc);
                             return m_randLoc;
-                        }
-                    }
-                }
+                //        }
+                //    }
+                //}
             }
         }
 

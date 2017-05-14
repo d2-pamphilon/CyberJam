@@ -21,6 +21,7 @@ public class Blender : MonoBehaviour {
         BoxingGloves,
         BlackHoodie,
         Money,
+        Gold,
         PC,
         Needle,
         FullBucket,
@@ -32,7 +33,8 @@ public class Blender : MonoBehaviour {
         TinyDoor,
         SpinalCord,
         Broom,
-        KnightPieceChess
+        KnightPieceChess,
+        Horse
 	}
 
     [SerializeField]
@@ -104,6 +106,7 @@ public class Blender : MonoBehaviour {
             }
 			if (sameCount == collectedObjects.Count)
 			{
+                print("USB");
                 GameObject usb = Instantiate(USBObject);
                 usb.GetComponent<UsbProgram>().program = outputs[i].output;
                 return usb;
