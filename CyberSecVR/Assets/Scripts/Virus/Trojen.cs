@@ -12,10 +12,10 @@ namespace Virus
 
         void Start()
         {
-            GameObject m_GM =  GameObject.FindGameObjectWithTag("DartTarget");
-            m_target = m_GM.transform;
+            //GameObject m_GM =  GameObject.FindGameObjectWithTag("DartTarget");
+            //m_target = m_GM.transform;
             transform.LookAt(m_target);
-            m_speed = 0f;
+            m_speed = 5f;
         }
 
         // Update is called once per frame
