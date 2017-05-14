@@ -12,17 +12,21 @@ namespace Virus
         public UsbProgram.Program m_ProgVirus;
         private PrefabSprites m_Prefab;
         private Transform[] ts;
+        private NewtonVR.NVRInteractable[] t;
         private Transform t_target;
         private int m_SphereSize;
 
         private GameObject t_const;
         //private bool deedDone;
         // Use this for initialization
+
+
+
         void Start()
         {
             m_Prefab = GetComponent<PrefabSprites>();
             m_SphereSize = 2;
-           // deedDone = false;
+            // deedDone = false;
             ts = gameObject.GetComponentsInChildren<Transform>();
             foreach (Transform Child in ts)
             {
@@ -32,6 +36,9 @@ namespace Virus
                     break;
                 }
             }
+            t = FindObjectsOfType<NewtonVR.NVRInteractable>();
+
+
 
         }
 
@@ -62,6 +69,7 @@ namespace Virus
                     GameObject t_burst = (GameObject)Instantiate(m_Prefab.Burst, t_target.position, Quaternion.identity);
 
                     Destroy(t_burst, 5f);
+                    Destroy(t_const, 60f);
                     //Destroy(t_const, 10f);
 
 
@@ -99,22 +107,11 @@ namespace Virus
         public Vector3 RandLoc()
         {
             Vector3 m_randLoc;
-            //while (true)
-            //{
-                m_randLoc = UnityEngine.Random.onUnitSphere * m_SphereSize;
 
-                //if (m_randLoc.x >= 0.0f && m_randLoc.x <= m_SphereSize)
-                //{
-                //    if (m_randLoc.y >= 0.0f && m_randLoc.y <= 0.0f)
-                //    {
-                //        if (m_randLoc.z >= -m_SphereSize && m_randLoc.z <= m_SphereSize)
-                //        {
-                //            print(m_randLoc);
-                            return m_randLoc;
-                //        }
-                //    }
-                //}
-            //}
+            m_randLoc = UnityEngine.Random.onUnitSphere * m_SphereSize;
+
+            return m_randLoc;
+
         }
 
         public float RandFloat(float _min, float _max)
@@ -190,7 +187,12 @@ namespace Virus
         }
         private void Rogue()
         {
-            
+            foreach(NewtonVR.NVRInteractable g in t)
+            {
+                g.GetComponent<Rigidbody>().useGravity = false;
+            }
+
+
 
         }
         private void MIM()
@@ -201,14 +203,8 @@ namespace Virus
         {
 
         }
-        private void DDOS()
-        {
-
-        }
-        private void DNS()
-        {
-
-        }
+        
+       
         private void Force()
         {
             print("force");
@@ -220,7 +216,7 @@ namespace Virus
         }
         private void Garden()
         {
-            for (int i = 0; i < 50; i++)
+            for (int i = 0; i < 10; i++)
             {
                 Vector2 t_pos = UnityEngine.Random.insideUnitCircle;
 

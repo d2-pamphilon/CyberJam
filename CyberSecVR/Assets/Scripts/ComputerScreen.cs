@@ -8,8 +8,8 @@ namespace ComputerScreen
     {
 
         public UsbProgram.Program m_virus;
+        private PrefabSprites m_Sprite;
 
-        public List<Sprite> m_sprites;
 
         private Canvas m_Canvas;
         private UnityEngine.UI.Image m_Image;
@@ -39,15 +39,15 @@ namespace ComputerScreen
                 case UsbProgram.Program.PhishingAttack:
                     
                     m_Canvas.enabled = true;
-                    m_Image.sprite = m_sprites[0];
+                    m_Image.sprite = m_Sprite.S_Fishing;
                     break;
                 case UsbProgram.Program.TrojanHorse:
                     m_Canvas.enabled = true;
-                    m_Image.sprite = m_sprites[1];
+                    m_Image.sprite = m_Sprite.S_Trojan;
                     break;
                 case UsbProgram.Program.Worms:
                     m_Canvas.enabled = true;
-                    m_Image.sprite = m_sprites[2];
+                    m_Image.sprite = m_Sprite.S_Worm;
                     break;
                 default:
                     m_Canvas.enabled = false;
