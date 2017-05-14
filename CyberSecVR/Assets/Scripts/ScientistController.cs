@@ -31,6 +31,7 @@ public class ScientistController : MonoBehaviour
     [SerializeField]
     private state movmentState;
     private bool foundslot;
+    public float pickUpDistance;
 
     private Transform usbWaypoint;
     // Use this for initialization
@@ -80,7 +81,7 @@ public class ScientistController : MonoBehaviour
 
                 float dist = Vector3.Distance(m_usbToGrab.transform.position, transform.position);
 
-                if (dist <= 0.5f)
+                if (dist <= pickUpDistance)
                 {
                     // m_seesUSB = false;
                     //m_parented = true;
@@ -117,7 +118,6 @@ public class ScientistController : MonoBehaviour
                     m_usbToGrab.transform.localScale = new Vector3(0.023f, 0.023f, 0.023f);
                     m_usbToGrab.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.None;
                     m_usbToGrab.transform.position = usbWaypoint.position;// += new Vector3(0f, 0.1f, 0f);
-
                     movmentState = state.partoling;
                 }
                 break;

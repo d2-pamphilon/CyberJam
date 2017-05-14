@@ -13,7 +13,12 @@ public class UsbProgram : MonoBehaviour {
         DDOS,
         RansomVirus,
         KeyLogger,
-        Worms
+        Worms,
+        BackDoor,
+        BruteForce,
+        DNS,
+        MIM
+
     }
 
     public Program program;
