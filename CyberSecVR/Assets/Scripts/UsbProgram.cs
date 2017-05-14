@@ -22,7 +22,12 @@ public class UsbProgram : MonoBehaviour {
     }
 
     public Program program;
-    public bool inSlot=false;
+    public bool inSlot;
+    void Start()
+    {
+        inSlot = false;
+      
+    }
 
     public void play(GameObject _screen)
     {

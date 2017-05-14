@@ -23,7 +23,7 @@ namespace Virus
         {
             float m_step = m_speed * Time.deltaTime;
             transform.position = Vector3.MoveTowards(transform.position, m_target.position, m_step);
-            Debug.DrawLine(transform.position, m_target.position, Color.black);
+            //Debug.DrawLine(transform.position, m_target.position, Color.black);
         }
     }
 }

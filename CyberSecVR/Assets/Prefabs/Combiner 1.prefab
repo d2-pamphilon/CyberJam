@@ -1790,8 +1790,12 @@ MonoBehaviour:
   outputs:
   - collectedObjects: 0700000001000000
     output: 1
-  - collectedObjects: 0300000001000000
+  - collectedObjects: 0d00000001000000
     output: 5
+  - collectedObjects: 050000001b000000
+    output: 2
+  - collectedObjects: 0f00000004000000
+    output: 4
 --- !u!114 &114518265381325726
 MonoBehaviour:
   m_ObjectHideFlags: 1
