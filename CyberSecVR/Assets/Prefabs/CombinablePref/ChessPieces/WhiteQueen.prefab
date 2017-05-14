@@ -19,10 +19,10 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4781659437149704}
-  - component: {fileID: 65407485373663684}
   - component: {fileID: 114754831140040500}
   - component: {fileID: 54668358473718418}
   - component: {fileID: 114106606311564460}
+  - component: {fileID: 64227115651039334}
   m_Layer: 0
   m_Name: WhiteQueen
   m_TagString: Untagged
@@ -127,8 +127,8 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!65 &65407485373663684
-BoxCollider:
+--- !u!64 &64227115651039334
+MeshCollider:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
@@ -137,8 +137,10 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 15.9810095, y: 31.941044, z: 15.74884}
-  m_Center: {x: 0.014507771, y: 15.470523, z: -0.0007480383}
+  m_Convex: 1
+  m_InflateMesh: 0
+  m_SkinWidth: 0.01
+  m_Mesh: {fileID: 0}
 --- !u!114 &114106606311564460
 MonoBehaviour:
   m_ObjectHideFlags: 1

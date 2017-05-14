@@ -19,10 +19,10 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4692155729222290}
-  - component: {fileID: 65392642651173788}
   - component: {fileID: 114912299114830370}
   - component: {fileID: 54096427687283926}
   - component: {fileID: 114172188922374050}
+  - component: {fileID: 64201426781766978}
   m_Layer: 0
   m_Name: WhiteKnight
   m_TagString: Untagged
@@ -127,8 +127,8 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!65 &65392642651173788
-BoxCollider:
+--- !u!64 &64201426781766978
+MeshCollider:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
@@ -137,8 +137,10 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 15.981011, y: 24.273634, z: 15.748841}
-  m_Center: {x: 0.01397943, y: 11.636933, z: -0.0011129081}
+  m_Convex: 1
+  m_InflateMesh: 0
+  m_SkinWidth: 0.01
+  m_Mesh: {fileID: 0}
 --- !u!114 &114172188922374050
 MonoBehaviour:
   m_ObjectHideFlags: 1

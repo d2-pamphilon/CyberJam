@@ -36,10 +36,10 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4356952046574358}
-  - component: {fileID: 65125295674403438}
   - component: {fileID: 114511670990090130}
   - component: {fileID: 54443273491727832}
   - component: {fileID: 114909567452172048}
+  - component: {fileID: 64481504578957180}
   m_Layer: 0
   m_Name: BlackPawn
   m_TagString: Untagged
@@ -127,8 +127,8 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!65 &65125295674403438
-BoxCollider:
+--- !u!64 &64481504578957180
+MeshCollider:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
@@ -137,8 +137,10 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 15.9810095, y: 31.941044, z: 15.74884}
-  m_Center: {x: 0.014507771, y: 15.470523, z: -0.0007480383}
+  m_Convex: 1
+  m_InflateMesh: 0
+  m_SkinWidth: 0.01
+  m_Mesh: {fileID: 0}
 --- !u!114 &114511670990090130
 MonoBehaviour:
   m_ObjectHideFlags: 1

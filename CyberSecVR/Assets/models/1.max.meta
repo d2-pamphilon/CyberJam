@@ -1,15 +1,37 @@
 fileFormatVersion: 2
-guid: 2c8ae485703ca16459f70d202c4e09d4
-timeCreated: 1494724554
+guid: 420d9490caf68dd488f216391f76c0f6
+timeCreated: 1494765812
 licenseType: Free
 ModelImporter:
   serializedVersion: 19
   fileIDToRecycleName:
     100000: //RootNode
+    100002: Ciel01
+    100004: Factice01
+    100006: Forme02
+    100008: Plan01
+    100010: "Sph\xE8re02"
+    100012: "Sph\xE8re03"
     400000: //RootNode
-    2300000: //RootNode
-    3300000: //RootNode
-    4300000: disk2
+    400002: Ciel01
+    400004: Factice01
+    400006: Forme02
+    400008: Plan01
+    400010: "Sph\xE8re02"
+    400012: "Sph\xE8re03"
+    2300000: Forme02
+    2300002: Plan01
+    2300004: "Sph\xE8re02"
+    2300006: "Sph\xE8re03"
+    3300000: Forme02
+    3300002: Plan01
+    3300004: "Sph\xE8re02"
+    3300006: "Sph\xE8re03"
+    4300000: Forme02
+    4300002: "Sph\xE8re02"
+    4300004: "Sph\xE8re03"
+    4300006: Plan01
+    9500000: //RootNode
   materials:
     importMaterials: 1
     materialName: 0
@@ -72,7 +94,7 @@ ModelImporter:
     hasExtraRoot: 0
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
-  animationType: 0
+  animationType: 2
   humanoidOversampling: 1
   additionalBone: 0
   userData: 

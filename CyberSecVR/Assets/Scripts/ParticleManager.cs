@@ -7,21 +7,27 @@ namespace Virus
 {
 
     public class ParticleManager : MonoBehaviour
-    {      
+    {
         public List<GameObject> m_Particles;
 
         public GameObject constFire;
         public GameObject BurstFire;
+        public GameObject RansomBox;
+        public GameObject worm;
         public UsbProgram.Program m_ProgVirus;
-
+        private Transform[] ts;
         private Transform t_target;
         public int m_SphereSize;
+
+        private GameObject t_const;
+        //private bool deedDone;
         // Use this for initialization
         void Start()
         {
             m_SphereSize = 2;
-
-            foreach (Transform Child in transform)
+           // deedDone = false;
+            ts = gameObject.GetComponentsInChildren<Transform>();
+            foreach (Transform Child in ts)
             {
                 if (Child.gameObject.tag == "DartTarget")
                 {
@@ -29,7 +35,7 @@ namespace Virus
                     break;
                 }
             }
-        
+
         }
 
 
@@ -49,16 +55,17 @@ namespace Virus
                 case UsbProgram.Program.BruteForce:
                     Force();
                     break;
-                    //case UsbProgram.Program.DNS:
-                    //DNS();
+                //case UsbProgram.Program.DNS:
+                //DNS();
                 //    break;
                 case UsbProgram.Program.DDOS: //fire particles
-                   
-                    GameObject t_const = (GameObject)Instantiate(constFire, t_target.position, Quaternion.Euler(-90f, 0f, 0f));
+
+
+                    t_const = Instantiate(constFire, t_target.position, Quaternion.Euler(-90f, 0f, 0f));
                     GameObject t_burst = (GameObject)Instantiate(BurstFire, t_target.position, Quaternion.identity);
 
                     Destroy(t_burst, 5f);
-                    Destroy(t_const, 10f);
+                    //Destroy(t_const, 10f);
 
 
                     break;
@@ -92,7 +99,7 @@ namespace Virus
         public Vector3 RandLoc()
         {
             Vector3 m_randLoc;
-            while(true)
+            while (true)
             {
                 m_randLoc = UnityEngine.Random.onUnitSphere * m_SphereSize;
 
@@ -146,15 +153,44 @@ namespace Virus
         }
         private void Worm()
         {
-            Instantiate(m_Particles[1], transform.position, Quaternion.identity);//Worms everywhere
+            Instantiate(worm, transform.position, Quaternion.identity);//Worms everywhere
+
         }
         private void Ransom()
         {
-            Instantiate(m_Particles[3], transform.position, Quaternion.identity);
+
+            foreach (Transform T in transform)
+            {
+                T.gameObject.SetActive(false);
+            }
+
+
+            Vector3 t_pos = transform.position += new Vector3(0, 0.1f, 0);
+            GameObject T_box = (GameObject)Instantiate(RansomBox, t_pos, Quaternion.identity, transform);
+            // T_box.SetActive(true);
+            //if gold collides
+            //destroy chest & gold 
+            //turn children on 
+            //clear list
+
+
+            //   Instantiate(m_Particles[3], transform.position, Quaternion.identity);
+        }
+        public void ransomOff()
+        {
+            foreach (Transform T in ts)
+            {
+                T.gameObject.SetActive(true);
+            }
+
+        }
+        public void stopFire()
+        {
+            Destroy(t_const);
         }
         private void Rogue()
         {
-            
+
         }
         private void MIM()
         {
@@ -175,13 +211,13 @@ namespace Virus
         private void Force()
         {
             print("force");
-          
+
         }
         private void Door()
         {
 
         }
-       
+
 
 
 

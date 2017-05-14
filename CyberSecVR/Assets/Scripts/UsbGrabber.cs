@@ -32,6 +32,7 @@ public class UsbGrabber : MonoBehaviour
             other.gameObject.GetComponent<UsbProgram>().inSlot = false;
             free = true;
             GetComponentInParent<ComputerController>().exitProgram();
+            GetComponentInParent<Virus.ParticleManager>().stopFire();
         }
 
     }

@@ -2,41 +2,20 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace Virus
+
+public class Worm : MonoBehaviour
 {
-    public class Worm : MonoBehaviour
+    private Vector3 direction;
+    public float speed;
+    void Start()
     {
-
-        public float m_Timer;
-        public float m_TimerDestroy;
-
-        public Rigidbody m_WormRB;
-        
-
-        // Use this for initialization
-        void Start()
-        {
-            transform.rotation = Random.rotation;
-            m_WormRB = GetComponent<Rigidbody>();
-
-            m_TimerDestroy = 5.0f;
-        }
-
-        // Update is called once per frame
-        void Update()
-        {
-            m_Timer += Time.deltaTime;
-            if (m_Timer >= m_TimerDestroy)
-            {
-                ByeBye();
-            }
-
-            m_WormRB.AddForce(Random.insideUnitSphere*1);
-        }
-
-       public void ByeBye()
-        {
-            Destroy(gameObject);
-        }
+        direction = Vector3.forward;
     }
+    void Update()
+    {
+        direction.x += 0.01f;
+        direction.z += 0.01f;
+        transform.position += direction * (speed/100) * Time.deltaTime;
+    }
+
 }

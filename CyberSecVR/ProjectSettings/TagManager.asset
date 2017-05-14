@@ -12,6 +12,9 @@ TagManager:
   - USB
   - rightHand
   - DartTarget
+  - Computer
+  - Screen
+  - Gold
   layers:
   - Default
   - TransparentFX

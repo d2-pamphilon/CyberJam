@@ -19,10 +19,10 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4132671704627712}
-  - component: {fileID: 65847881441468992}
   - component: {fileID: 114349400487112926}
   - component: {fileID: 54982068084407492}
   - component: {fileID: 114794393376300664}
+  - component: {fileID: 64720095370586532}
   m_Layer: 0
   m_Name: WhitePawn
   m_TagString: Untagged
@@ -127,8 +127,8 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!65 &65847881441468992
-BoxCollider:
+--- !u!64 &64720095370586532
+MeshCollider:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
@@ -137,8 +137,10 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 15.9810095, y: 31.941044, z: 15.74884}
-  m_Center: {x: 0.014507771, y: 15.470523, z: -0.0007480383}
+  m_Convex: 1
+  m_InflateMesh: 0
+  m_SkinWidth: 0.01
+  m_Mesh: {fileID: 0}
 --- !u!114 &114349400487112926
 MonoBehaviour:
   m_ObjectHideFlags: 1
