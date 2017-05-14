@@ -22,6 +22,8 @@ public class UsbGrabber : MonoBehaviour
             other.GetComponent<Rigidbody>().velocity = Vector3.zero;
             other.GetComponent<UsbProgram>().inSlot = true;
             free = false;
+
+            GameManager.instance.CheckUsb(other.GetComponent<UsbProgram>().program);
         }
     }
 
