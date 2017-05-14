@@ -52,12 +52,6 @@ namespace Virus
                     //case UsbProgram.Program.DNS:
                     //DNS();
                 //    break;
-<<<<<<< HEAD
-                case UsbProgram.Program.DDOS:
-                    DDOS();//fire particles
-=======
-                //case UsbProgram.Program.DNS:
-                //  break;
                 case UsbProgram.Program.DDOS: //fire particles
                    
                     GameObject t_const = (GameObject)Instantiate(constFire, t_target.position, Quaternion.Euler(-90f, 0f, 0f));
@@ -66,7 +60,7 @@ namespace Virus
                     Destroy(t_burst, 5f);
                     Destroy(t_const, 10f);
 
->>>>>>> origin/master
+
                     break;
                 case UsbProgram.Program.PhishingAttack: // All the fish
                     fishspawner();
@@ -98,6 +92,7 @@ namespace Virus
         public Vector3 RandLoc()
         {
             Vector3 m_randLoc;
+            while(true)
             {
                 m_randLoc = UnityEngine.Random.onUnitSphere * m_SphereSize;
 
