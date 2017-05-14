@@ -18,7 +18,7 @@ public class UsbProgram : MonoBehaviour {
         BruteForce,
         DNS,
         MIM,
-        LAST
+        Garden
     }
 
     public Program program;

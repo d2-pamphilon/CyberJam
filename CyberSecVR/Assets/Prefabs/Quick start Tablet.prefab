@@ -195,7 +195,6 @@ GameObject:
   - component: {fileID: 65975963905026256}
   - component: {fileID: 114445485115473232}
   - component: {fileID: 54323224427223214}
-  - component: {fileID: 114795810266611124}
   m_Layer: 0
   m_Name: Quick start Tablet
   m_TagString: Untagged
@@ -476,18 +475,7 @@ MonoBehaviour:
       PublicKeyToken=null
   OnBeginInteraction:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 114795810266611124}
-        m_MethodName: OnGrabbed
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
       PublicKeyToken=null
   OnEndInteraction:
@@ -592,17 +580,6 @@ MonoBehaviour:
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
---- !u!114 &114795810266611124
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1601679991165332}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9ed565f9d0f867547ab677d0625a2872, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &114802656061841048
 MonoBehaviour:
   m_ObjectHideFlags: 1
