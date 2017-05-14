@@ -6096,14 +6096,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8020c53bbe82c5c4088c7e6ceb7f4d66, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Particles:
-  - {fileID: 1194246060422600, guid: 15181be2195f1e0468a5600eba874099, type: 2}
-  - {fileID: 1602512909760464, guid: 772a89ea71055ba4a9434d896651dfa2, type: 2}
-  - {fileID: 1969406654432958, guid: ac603292e6b17c245b09685c59ee8970, type: 2}
-  constFire: {fileID: 1519057594522938, guid: cd7786b8dd0bd3e4d928c15f70f1b768, type: 2}
-  BurstFire: {fileID: 1653879315611720, guid: f837bf8591e31144480b59d1150d8a4e, type: 2}
+  m_topspawner: {fileID: 0}
   m_ProgVirus: 0
-  m_SphereSize: 0
+  m_Prefab: {fileID: 0}
 --- !u!114 &114054076528136146
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -6115,14 +6110,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8020c53bbe82c5c4088c7e6ceb7f4d66, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Particles:
-  - {fileID: 1194246060422600, guid: 15181be2195f1e0468a5600eba874099, type: 2}
-  - {fileID: 1602512909760464, guid: 772a89ea71055ba4a9434d896651dfa2, type: 2}
-  - {fileID: 1969406654432958, guid: ac603292e6b17c245b09685c59ee8970, type: 2}
-  constFire: {fileID: 1519057594522938, guid: cd7786b8dd0bd3e4d928c15f70f1b768, type: 2}
-  BurstFire: {fileID: 1653879315611720, guid: f837bf8591e31144480b59d1150d8a4e, type: 2}
+  m_topspawner: {fileID: 0}
   m_ProgVirus: 0
-  m_SphereSize: 0
+  m_Prefab: {fileID: 0}
 --- !u!114 &114092376144099852
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -6349,14 +6339,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8020c53bbe82c5c4088c7e6ceb7f4d66, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Particles:
-  - {fileID: 1194246060422600, guid: 15181be2195f1e0468a5600eba874099, type: 2}
-  - {fileID: 1602512909760464, guid: 772a89ea71055ba4a9434d896651dfa2, type: 2}
-  - {fileID: 1969406654432958, guid: ac603292e6b17c245b09685c59ee8970, type: 2}
-  constFire: {fileID: 1519057594522938, guid: cd7786b8dd0bd3e4d928c15f70f1b768, type: 2}
-  BurstFire: {fileID: 1653879315611720, guid: f837bf8591e31144480b59d1150d8a4e, type: 2}
+  m_topspawner: {fileID: 0}
   m_ProgVirus: 0
-  m_SphereSize: 0
+  m_Prefab: {fileID: 0}
 --- !u!114 &114230000313430284
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -6368,14 +6353,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8020c53bbe82c5c4088c7e6ceb7f4d66, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Particles:
-  - {fileID: 1194246060422600, guid: 15181be2195f1e0468a5600eba874099, type: 2}
-  - {fileID: 1602512909760464, guid: 772a89ea71055ba4a9434d896651dfa2, type: 2}
-  - {fileID: 1969406654432958, guid: ac603292e6b17c245b09685c59ee8970, type: 2}
-  constFire: {fileID: 1519057594522938, guid: cd7786b8dd0bd3e4d928c15f70f1b768, type: 2}
-  BurstFire: {fileID: 1653879315611720, guid: f837bf8591e31144480b59d1150d8a4e, type: 2}
+  m_topspawner: {fileID: 0}
   m_ProgVirus: 0
-  m_SphereSize: 0
+  m_Prefab: {fileID: 0}
 --- !u!114 &114243132780609310
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -6565,14 +6545,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8020c53bbe82c5c4088c7e6ceb7f4d66, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Particles:
-  - {fileID: 1194246060422600, guid: 15181be2195f1e0468a5600eba874099, type: 2}
-  - {fileID: 1602512909760464, guid: 772a89ea71055ba4a9434d896651dfa2, type: 2}
-  - {fileID: 1969406654432958, guid: ac603292e6b17c245b09685c59ee8970, type: 2}
-  constFire: {fileID: 1519057594522938, guid: cd7786b8dd0bd3e4d928c15f70f1b768, type: 2}
-  BurstFire: {fileID: 1653879315611720, guid: f837bf8591e31144480b59d1150d8a4e, type: 2}
+  m_topspawner: {fileID: 0}
   m_ProgVirus: 0
-  m_SphereSize: 0
+  m_Prefab: {fileID: 0}
 --- !u!114 &114320620381389472
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -6650,14 +6625,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8020c53bbe82c5c4088c7e6ceb7f4d66, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Particles:
-  - {fileID: 1194246060422600, guid: 15181be2195f1e0468a5600eba874099, type: 2}
-  - {fileID: 1602512909760464, guid: 772a89ea71055ba4a9434d896651dfa2, type: 2}
-  - {fileID: 1969406654432958, guid: ac603292e6b17c245b09685c59ee8970, type: 2}
-  constFire: {fileID: 1519057594522938, guid: cd7786b8dd0bd3e4d928c15f70f1b768, type: 2}
-  BurstFire: {fileID: 1653879315611720, guid: f837bf8591e31144480b59d1150d8a4e, type: 2}
+  m_topspawner: {fileID: 0}
   m_ProgVirus: 0
-  m_SphereSize: 0
+  m_Prefab: {fileID: 0}
 --- !u!114 &114372210834786564
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -6763,14 +6733,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8020c53bbe82c5c4088c7e6ceb7f4d66, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Particles:
-  - {fileID: 1194246060422600, guid: 15181be2195f1e0468a5600eba874099, type: 2}
-  - {fileID: 1602512909760464, guid: 772a89ea71055ba4a9434d896651dfa2, type: 2}
-  - {fileID: 1969406654432958, guid: ac603292e6b17c245b09685c59ee8970, type: 2}
-  constFire: {fileID: 1519057594522938, guid: cd7786b8dd0bd3e4d928c15f70f1b768, type: 2}
-  BurstFire: {fileID: 1653879315611720, guid: f837bf8591e31144480b59d1150d8a4e, type: 2}
+  m_topspawner: {fileID: 0}
   m_ProgVirus: 0
-  m_SphereSize: 0
+  m_Prefab: {fileID: 0}
 --- !u!114 &114502364406901314
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -7104,14 +7069,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8020c53bbe82c5c4088c7e6ceb7f4d66, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Particles:
-  - {fileID: 1194246060422600, guid: 15181be2195f1e0468a5600eba874099, type: 2}
-  - {fileID: 1602512909760464, guid: 772a89ea71055ba4a9434d896651dfa2, type: 2}
-  - {fileID: 1969406654432958, guid: ac603292e6b17c245b09685c59ee8970, type: 2}
-  constFire: {fileID: 1519057594522938, guid: cd7786b8dd0bd3e4d928c15f70f1b768, type: 2}
-  BurstFire: {fileID: 1653879315611720, guid: f837bf8591e31144480b59d1150d8a4e, type: 2}
+  m_topspawner: {fileID: 0}
   m_ProgVirus: 0
-  m_SphereSize: 0
+  m_Prefab: {fileID: 0}
 --- !u!114 &114811974014022368
 MonoBehaviour:
   m_ObjectHideFlags: 1

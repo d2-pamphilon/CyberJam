@@ -8,22 +8,19 @@ namespace Virus
 
     public class ParticleManager : MonoBehaviour
     {
-        public List<GameObject> m_Particles;
-
-        public GameObject constFire;
-        public GameObject BurstFire;
-        public GameObject RansomBox;
-        public GameObject worm;
+        public Transform m_topspawner;
         public UsbProgram.Program m_ProgVirus;
+        private PrefabSprites m_Prefab;
         private Transform[] ts;
         private Transform t_target;
-        public int m_SphereSize;
+        private int m_SphereSize;
 
         private GameObject t_const;
         //private bool deedDone;
         // Use this for initialization
         void Start()
         {
+            m_Prefab = GetComponent<PrefabSprites>();
             m_SphereSize = 2;
            // deedDone = false;
             ts = gameObject.GetComponentsInChildren<Transform>();
@@ -61,8 +58,8 @@ namespace Virus
                 case UsbProgram.Program.DDOS: //fire particles
 
 
-                    t_const = Instantiate(constFire, t_target.position, Quaternion.Euler(-90f, 0f, 0f));
-                    GameObject t_burst = (GameObject)Instantiate(BurstFire, t_target.position, Quaternion.identity);
+                    t_const = Instantiate(m_Prefab.ConstFire, t_target.position, Quaternion.Euler(-90f, 0f, 0f));
+                    GameObject t_burst = (GameObject)Instantiate(m_Prefab.Burst, t_target.position, Quaternion.identity);
 
                     Destroy(t_burst, 5f);
                     //Destroy(t_const, 10f);
@@ -89,6 +86,9 @@ namespace Virus
                     break;
                 case UsbProgram.Program.Worms:
                     Worm();
+                    break;
+                case UsbProgram.Program.Garden:
+                    Garden();
                     break;
 
             }
@@ -134,7 +134,7 @@ namespace Virus
                 t_pos.y = 2f;
 
                 GameObject t_fishParticle;
-                t_fishParticle = (GameObject)Instantiate(m_Particles[2], t_pos, Quaternion.identity);
+                t_fishParticle = (GameObject)Instantiate(m_Prefab.Fish, t_pos, Quaternion.identity);
                 Destroy(t_fishParticle, 5f);
             }
 
@@ -146,14 +146,14 @@ namespace Virus
                 Vector3 m_Pos = RandLoc();
                 GameObject m_Dart;
 
-                m_Dart = (GameObject)Instantiate(m_Particles[0], m_Pos, Quaternion.identity);
+                m_Dart = (GameObject)Instantiate(m_Prefab.Dart, m_Pos, Quaternion.identity);
                 m_Dart.GetComponent<Trojen>().m_target = t_target;
                 Destroy(m_Dart, 4f);
             }
         }
         private void Worm()
         {
-            Instantiate(worm, transform.position, Quaternion.identity);//Worms everywhere
+            Instantiate(m_Prefab.Worm, transform.position, Quaternion.identity);//Worms everywhere
 
         }
         private void Ransom()
@@ -166,7 +166,7 @@ namespace Virus
 
 
             Vector3 t_pos = transform.position += new Vector3(0, 0.1f, 0);
-            GameObject T_box = (GameObject)Instantiate(RansomBox, t_pos, Quaternion.identity, transform);
+            GameObject T_box = (GameObject)Instantiate(m_Prefab.RansomBox, t_pos, Quaternion.identity, transform);
             // T_box.SetActive(true);
             //if gold collides
             //destroy chest & gold 
@@ -215,6 +215,17 @@ namespace Virus
         }
         private void Door()
         {
+
+        }
+        private void Garden()
+        {
+            for (int i = 0; i < 50; i++)
+            {
+                Vector2 t_pos = UnityEngine.Random.insideUnitCircle;
+
+                GameObject t_Grass = (GameObject)Instantiate(m_Prefab.Garden, new Vector3(t_pos.x, m_topspawner.position.y, t_pos.y), Quaternion.identity);
+                Destroy(t_Grass, 10f);
+            }
 
         }
 

@@ -3,14 +3,15 @@ using System.Collections.Generic;
 using UnityEngine;
 using NewtonVR;
 
-public class Blender : MonoBehaviour {
+public class Blender : MonoBehaviour
+{
 
-	public enum CombinableObjectType
-	{
-		NULL,
-		Sword,
-		Cube,
-		Banana,
+    public enum CombinableObjectType
+    {
+        NULL,
+        Sword,
+        Cube,
+        Banana,
         Ball,
         Doll,
         Armour,
@@ -34,8 +35,10 @@ public class Blender : MonoBehaviour {
         SpinalCord,
         Broom,
         KnightPieceChess,
-        Horse
-	}
+        Horse,
+        Flower,
+        Garden
+    }
 
     [SerializeField]
     NVRLever activationLever;
@@ -43,31 +46,33 @@ public class Blender : MonoBehaviour {
     [SerializeField]
     GameObject USBObject;
 
-	[System.Serializable]
-	public struct objectPairWithOutput
-	{
-		public List<CombinableObjectType> collectedObjects;
-		public UsbProgram.Program output;
-	}
+    [System.Serializable]
+    public struct objectPairWithOutput
+    {
+        public List<CombinableObjectType> collectedObjects;
+        public UsbProgram.Program output;
+    }
 
-	List<CombinableObjectType> collectedObjects;
+    List<CombinableObjectType> collectedObjects;
 
-	[SerializeField]
-	List<objectPairWithOutput> outputs = new List<objectPairWithOutput>();
+    [SerializeField]
+    List<objectPairWithOutput> outputs = new List<objectPairWithOutput>();
 
     // Use this for initialization
-    void Start () {
+    void Start()
+    {
         collectedObjects = new List<CombinableObjectType>();
-	}
-	
-	// Update is called once per frame
-	void Update () {
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
         if (activationLever.CurrentLeverPosition == NVRLever.LeverPosition.On
             && activationLever.LastLeverPosition != NVRLever.LeverPosition.On)
         {
             activate();
         }
-	}
+    }
 
     public void activate()
     {
@@ -83,16 +88,16 @@ public class Blender : MonoBehaviour {
         collectedObjects.Clear();
     }
 
-	public void addObject(CombinableObjectType objType)
-	{
+    public void addObject(CombinableObjectType objType)
+    {
         collectedObjects.Add(objType);
-	}
+    }
 
 
-	GameObject canObjectsCombine()
-	{
-		for (int i = 0; i < outputs.Count; i++)
-		{
+    GameObject canObjectsCombine()
+    {
+        for (int i = 0; i < outputs.Count; i++)
+        {
             int sameCount = 0;
             for (int j = 0; j < collectedObjects.Count; j++)
             {
@@ -104,14 +109,14 @@ public class Blender : MonoBehaviour {
                     }
                 }
             }
-			if (sameCount == collectedObjects.Count)
-			{
+            if (sameCount == collectedObjects.Count)
+            {
                 print("USB");
                 GameObject usb = Instantiate(USBObject);
                 usb.GetComponent<UsbProgram>().program = outputs[i].output;
                 return usb;
-			}
-		}
-		return null;
-	}
+            }
+        }
+        return null;
+    }
 }
