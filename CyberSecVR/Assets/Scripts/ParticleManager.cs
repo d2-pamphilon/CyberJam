@@ -7,17 +7,29 @@ namespace Virus
 {
 
     public class ParticleManager : MonoBehaviour
-    {
-
+    {      
         public List<GameObject> m_Particles;
 
+        public GameObject constFire;
+        public GameObject BurstFire;
         public UsbProgram.Program m_ProgVirus;
 
+        private Transform t_target;
         public int m_SphereSize;
         // Use this for initialization
         void Start()
         {
             m_SphereSize = 2;
+
+            foreach (Transform Child in transform)
+            {
+                if (Child.gameObject.tag == "DartTarget")
+                {
+                    t_target = Child;
+                    break;
+                }
+            }
+        
         }
 
 
@@ -38,6 +50,13 @@ namespace Virus
                 //case UsbProgram.Program.DNS:
                 //  break;
                 case UsbProgram.Program.DDOS: //fire particles
+                   
+                    GameObject t_const = (GameObject)Instantiate(constFire, t_target.position, Quaternion.Euler(-90f, 0f, 0f));
+                    GameObject t_burst = (GameObject)Instantiate(BurstFire, t_target.position, Quaternion.identity);
+
+                    Destroy(t_burst, 5f);
+                    Destroy(t_const, 10f);
+
                     break;
                 case UsbProgram.Program.PhishingAttack: // All the fish
                     fishspawner();                // m_Time = 0.1f;
@@ -107,7 +126,9 @@ namespace Virus
             {
                 Vector3 m_Pos = RandLoc();
                 GameObject m_Dart;
+
                 m_Dart = (GameObject)Instantiate(m_Particles[0], m_Pos, Quaternion.identity);
+                m_Dart.GetComponent<Trojen>().m_target = t_target;
                 Destroy(m_Dart, 4f);
             }
         }
