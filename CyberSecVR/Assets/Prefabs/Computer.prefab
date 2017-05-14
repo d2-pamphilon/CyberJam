@@ -629,7 +629,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_topspawner: {fileID: 4284351192633692}
   m_ProgVirus: 0
-  m_Prefab: {fileID: 0}
 --- !u!114 &114969709471121104
 MonoBehaviour:
   m_ObjectHideFlags: 1

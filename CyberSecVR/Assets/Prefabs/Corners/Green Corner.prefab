@@ -22,6 +22,7 @@ GameObject:
   - component: {fileID: 95236525164773938}
   - component: {fileID: 114344440204762944}
   - component: {fileID: 114447250099290840}
+  - component: {fileID: 114554508956125536}
   m_Layer: 0
   m_Name: Computer (1)
   m_TagString: Computer
@@ -1457,6 +1458,7 @@ GameObject:
   - component: {fileID: 95078700387696250}
   - component: {fileID: 114959554689279082}
   - component: {fileID: 114805998850265294}
+  - component: {fileID: 114175128242703874}
   m_Layer: 0
   m_Name: Computer
   m_TagString: Computer
@@ -1740,6 +1742,7 @@ GameObject:
   - component: {fileID: 95533961792991626}
   - component: {fileID: 114896433136629066}
   - component: {fileID: 114111524589269016}
+  - component: {fileID: 114740232581536820}
   m_Layer: 0
   m_Name: Computer (4)
   m_TagString: Computer
@@ -1813,6 +1816,7 @@ GameObject:
   - component: {fileID: 95108558076571218}
   - component: {fileID: 114597597544296550}
   - component: {fileID: 114932222966163538}
+  - component: {fileID: 114498627102253106}
   m_Layer: 0
   m_Name: Computer (3)
   m_TagString: Computer
@@ -1884,6 +1888,7 @@ GameObject:
   - component: {fileID: 95239754870950110}
   - component: {fileID: 114720671925819020}
   - component: {fileID: 114664368342384024}
+  - component: {fileID: 114522735406254934}
   m_Layer: 0
   m_Name: Computer (5)
   m_TagString: Computer
@@ -1917,6 +1922,7 @@ GameObject:
   - component: {fileID: 95336015002624558}
   - component: {fileID: 114582026243317462}
   - component: {fileID: 114438420337879574}
+  - component: {fileID: 114732777246083830}
   m_Layer: 0
   m_Name: Computer (2)
   m_TagString: Computer
@@ -1980,6 +1986,7 @@ GameObject:
   - component: {fileID: 95234539373533840}
   - component: {fileID: 114171764332187160}
   - component: {fileID: 114223912751703820}
+  - component: {fileID: 114339433317077780}
   m_Layer: 0
   m_Name: Computer (6)
   m_TagString: Computer
@@ -2401,6 +2408,7 @@ GameObject:
   - component: {fileID: 95080036512500708}
   - component: {fileID: 114897458248200832}
   - component: {fileID: 114367794593463034}
+  - component: {fileID: 114635508058137882}
   m_Layer: 0
   m_Name: Computer (7)
   m_TagString: Computer
@@ -6302,14 +6310,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8020c53bbe82c5c4088c7e6ceb7f4d66, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Particles:
-  - {fileID: 1194246060422600, guid: 15181be2195f1e0468a5600eba874099, type: 2}
-  - {fileID: 1602512909760464, guid: 772a89ea71055ba4a9434d896651dfa2, type: 2}
-  - {fileID: 1969406654432958, guid: ac603292e6b17c245b09685c59ee8970, type: 2}
-  constFire: {fileID: 1519057594522938, guid: cd7786b8dd0bd3e4d928c15f70f1b768, type: 2}
-  BurstFire: {fileID: 1653879315611720, guid: f837bf8591e31144480b59d1150d8a4e, type: 2}
+  m_topspawner: {fileID: 4796385056494448}
   m_ProgVirus: 0
-  m_SphereSize: 0
 --- !u!114 &114112136048225812
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -6398,6 +6400,27 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   UsbPort: {fileID: 1878106949569472}
   screen: {fileID: 1203727000141680}
+--- !u!114 &114175128242703874
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1549231548429044}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 140a42b70e904e24bb54a37ae0ebe84d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Fish: {fileID: 1969406654432958, guid: ac603292e6b17c245b09685c59ee8970, type: 2}
+  Dart: {fileID: 1194246060422600, guid: 15181be2195f1e0468a5600eba874099, type: 2}
+  Worm: {fileID: 1147816055821996, guid: 7fbf3d5d6ebb52b44ac098459dd8bf2a, type: 2}
+  RansomBox: {fileID: 1167309487123678, guid: 6eb6b7dd4b4a01d4184909c76a6c172f, type: 2}
+  ConstFire: {fileID: 1519057594522938, guid: cd7786b8dd0bd3e4d928c15f70f1b768, type: 2}
+  Burst: {fileID: 1653879315611720, guid: f837bf8591e31144480b59d1150d8a4e, type: 2}
+  Garden: {fileID: 1008797909847432, guid: 8b64a017dea81514a912053b6cdfec49, type: 2}
+  S_Trojan: {fileID: 21300000, guid: 05c291fc5bdc3e946bbda04e036152fc, type: 3}
+  S_Worm: {fileID: 21300000, guid: b789062da0152694f9cf8f6af56aad58, type: 3}
+  S_Fishing: {fileID: 21300000, guid: ec5173b0c9b29b5498983b4951672759, type: 3}
 --- !u!114 &114180820954155798
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -6594,14 +6617,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8020c53bbe82c5c4088c7e6ceb7f4d66, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Particles:
-  - {fileID: 1194246060422600, guid: 15181be2195f1e0468a5600eba874099, type: 2}
-  - {fileID: 1602512909760464, guid: 772a89ea71055ba4a9434d896651dfa2, type: 2}
-  - {fileID: 1969406654432958, guid: ac603292e6b17c245b09685c59ee8970, type: 2}
-  constFire: {fileID: 1519057594522938, guid: cd7786b8dd0bd3e4d928c15f70f1b768, type: 2}
-  BurstFire: {fileID: 1653879315611720, guid: f837bf8591e31144480b59d1150d8a4e, type: 2}
+  m_topspawner: {fileID: 4955109294548630}
   m_ProgVirus: 0
-  m_SphereSize: 0
 --- !u!114 &114224923992578392
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -6709,6 +6726,27 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   usb: {fileID: 0}
   free: 1
+--- !u!114 &114339433317077780
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1831478141122020}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 140a42b70e904e24bb54a37ae0ebe84d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Fish: {fileID: 1969406654432958, guid: ac603292e6b17c245b09685c59ee8970, type: 2}
+  Dart: {fileID: 1194246060422600, guid: 15181be2195f1e0468a5600eba874099, type: 2}
+  Worm: {fileID: 1147816055821996, guid: 7fbf3d5d6ebb52b44ac098459dd8bf2a, type: 2}
+  RansomBox: {fileID: 1167309487123678, guid: 6eb6b7dd4b4a01d4184909c76a6c172f, type: 2}
+  ConstFire: {fileID: 1519057594522938, guid: cd7786b8dd0bd3e4d928c15f70f1b768, type: 2}
+  Burst: {fileID: 1653879315611720, guid: f837bf8591e31144480b59d1150d8a4e, type: 2}
+  Garden: {fileID: 1008797909847432, guid: 8b64a017dea81514a912053b6cdfec49, type: 2}
+  S_Trojan: {fileID: 21300000, guid: 05c291fc5bdc3e946bbda04e036152fc, type: 3}
+  S_Worm: {fileID: 21300000, guid: b789062da0152694f9cf8f6af56aad58, type: 3}
+  S_Fishing: {fileID: 21300000, guid: ec5173b0c9b29b5498983b4951672759, type: 3}
 --- !u!114 &114344440204762944
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -6733,14 +6771,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8020c53bbe82c5c4088c7e6ceb7f4d66, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Particles:
-  - {fileID: 1194246060422600, guid: 15181be2195f1e0468a5600eba874099, type: 2}
-  - {fileID: 1602512909760464, guid: 772a89ea71055ba4a9434d896651dfa2, type: 2}
-  - {fileID: 1969406654432958, guid: ac603292e6b17c245b09685c59ee8970, type: 2}
-  constFire: {fileID: 1519057594522938, guid: cd7786b8dd0bd3e4d928c15f70f1b768, type: 2}
-  BurstFire: {fileID: 1653879315611720, guid: f837bf8591e31144480b59d1150d8a4e, type: 2}
+  m_topspawner: {fileID: 4166441688539488}
   m_ProgVirus: 0
-  m_SphereSize: 0
 --- !u!114 &114424803866155352
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -6765,14 +6797,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8020c53bbe82c5c4088c7e6ceb7f4d66, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Particles:
-  - {fileID: 1194246060422600, guid: 15181be2195f1e0468a5600eba874099, type: 2}
-  - {fileID: 1602512909760464, guid: 772a89ea71055ba4a9434d896651dfa2, type: 2}
-  - {fileID: 1969406654432958, guid: ac603292e6b17c245b09685c59ee8970, type: 2}
-  constFire: {fileID: 1519057594522938, guid: cd7786b8dd0bd3e4d928c15f70f1b768, type: 2}
-  BurstFire: {fileID: 1653879315611720, guid: f837bf8591e31144480b59d1150d8a4e, type: 2}
+  m_topspawner: {fileID: 4838168200125508}
   m_ProgVirus: 0
-  m_SphereSize: 0
 --- !u!114 &114447250099290840
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -6784,14 +6810,29 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8020c53bbe82c5c4088c7e6ceb7f4d66, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Particles:
-  - {fileID: 1194246060422600, guid: 15181be2195f1e0468a5600eba874099, type: 2}
-  - {fileID: 1602512909760464, guid: 772a89ea71055ba4a9434d896651dfa2, type: 2}
-  - {fileID: 1969406654432958, guid: ac603292e6b17c245b09685c59ee8970, type: 2}
-  constFire: {fileID: 1519057594522938, guid: cd7786b8dd0bd3e4d928c15f70f1b768, type: 2}
-  BurstFire: {fileID: 1653879315611720, guid: f837bf8591e31144480b59d1150d8a4e, type: 2}
+  m_topspawner: {fileID: 4777469979883156}
   m_ProgVirus: 0
-  m_SphereSize: 0
+--- !u!114 &114498627102253106
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1748297950965384}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 140a42b70e904e24bb54a37ae0ebe84d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Fish: {fileID: 1969406654432958, guid: ac603292e6b17c245b09685c59ee8970, type: 2}
+  Dart: {fileID: 1194246060422600, guid: 15181be2195f1e0468a5600eba874099, type: 2}
+  Worm: {fileID: 1147816055821996, guid: 7fbf3d5d6ebb52b44ac098459dd8bf2a, type: 2}
+  RansomBox: {fileID: 1167309487123678, guid: 6eb6b7dd4b4a01d4184909c76a6c172f, type: 2}
+  ConstFire: {fileID: 1519057594522938, guid: cd7786b8dd0bd3e4d928c15f70f1b768, type: 2}
+  Burst: {fileID: 1653879315611720, guid: f837bf8591e31144480b59d1150d8a4e, type: 2}
+  Garden: {fileID: 1008797909847432, guid: 8b64a017dea81514a912053b6cdfec49, type: 2}
+  S_Trojan: {fileID: 21300000, guid: 05c291fc5bdc3e946bbda04e036152fc, type: 3}
+  S_Worm: {fileID: 21300000, guid: b789062da0152694f9cf8f6af56aad58, type: 3}
+  S_Fishing: {fileID: 21300000, guid: ec5173b0c9b29b5498983b4951672759, type: 3}
 --- !u!114 &114501707571118704
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -6808,6 +6849,27 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
+--- !u!114 &114522735406254934
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1803092229184726}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 140a42b70e904e24bb54a37ae0ebe84d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Fish: {fileID: 1969406654432958, guid: ac603292e6b17c245b09685c59ee8970, type: 2}
+  Dart: {fileID: 1194246060422600, guid: 15181be2195f1e0468a5600eba874099, type: 2}
+  Worm: {fileID: 1147816055821996, guid: 7fbf3d5d6ebb52b44ac098459dd8bf2a, type: 2}
+  RansomBox: {fileID: 1167309487123678, guid: 6eb6b7dd4b4a01d4184909c76a6c172f, type: 2}
+  ConstFire: {fileID: 1519057594522938, guid: cd7786b8dd0bd3e4d928c15f70f1b768, type: 2}
+  Burst: {fileID: 1653879315611720, guid: f837bf8591e31144480b59d1150d8a4e, type: 2}
+  Garden: {fileID: 1008797909847432, guid: 8b64a017dea81514a912053b6cdfec49, type: 2}
+  S_Trojan: {fileID: 21300000, guid: 05c291fc5bdc3e946bbda04e036152fc, type: 3}
+  S_Worm: {fileID: 21300000, guid: b789062da0152694f9cf8f6af56aad58, type: 3}
+  S_Fishing: {fileID: 21300000, guid: ec5173b0c9b29b5498983b4951672759, type: 3}
 --- !u!114 &114537081604642146
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -6872,6 +6934,27 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
+--- !u!114 &114554508956125536
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1002385705369680}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 140a42b70e904e24bb54a37ae0ebe84d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Fish: {fileID: 1969406654432958, guid: ac603292e6b17c245b09685c59ee8970, type: 2}
+  Dart: {fileID: 1194246060422600, guid: 15181be2195f1e0468a5600eba874099, type: 2}
+  Worm: {fileID: 1147816055821996, guid: 7fbf3d5d6ebb52b44ac098459dd8bf2a, type: 2}
+  RansomBox: {fileID: 1167309487123678, guid: 6eb6b7dd4b4a01d4184909c76a6c172f, type: 2}
+  ConstFire: {fileID: 1519057594522938, guid: cd7786b8dd0bd3e4d928c15f70f1b768, type: 2}
+  Burst: {fileID: 1653879315611720, guid: f837bf8591e31144480b59d1150d8a4e, type: 2}
+  Garden: {fileID: 1008797909847432, guid: 8b64a017dea81514a912053b6cdfec49, type: 2}
+  S_Trojan: {fileID: 21300000, guid: 05c291fc5bdc3e946bbda04e036152fc, type: 3}
+  S_Worm: {fileID: 21300000, guid: b789062da0152694f9cf8f6af56aad58, type: 3}
+  S_Fishing: {fileID: 21300000, guid: ec5173b0c9b29b5498983b4951672759, type: 3}
 --- !u!114 &114582026243317462
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -6914,6 +6997,27 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   UsbPort: {fileID: 1644639033089782}
   screen: {fileID: 1981918708397272}
+--- !u!114 &114635508058137882
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1993114078755038}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 140a42b70e904e24bb54a37ae0ebe84d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Fish: {fileID: 1969406654432958, guid: ac603292e6b17c245b09685c59ee8970, type: 2}
+  Dart: {fileID: 1194246060422600, guid: 15181be2195f1e0468a5600eba874099, type: 2}
+  Worm: {fileID: 1147816055821996, guid: 7fbf3d5d6ebb52b44ac098459dd8bf2a, type: 2}
+  RansomBox: {fileID: 1167309487123678, guid: 6eb6b7dd4b4a01d4184909c76a6c172f, type: 2}
+  ConstFire: {fileID: 1519057594522938, guid: cd7786b8dd0bd3e4d928c15f70f1b768, type: 2}
+  Burst: {fileID: 1653879315611720, guid: f837bf8591e31144480b59d1150d8a4e, type: 2}
+  Garden: {fileID: 1008797909847432, guid: 8b64a017dea81514a912053b6cdfec49, type: 2}
+  S_Trojan: {fileID: 21300000, guid: 05c291fc5bdc3e946bbda04e036152fc, type: 3}
+  S_Worm: {fileID: 21300000, guid: b789062da0152694f9cf8f6af56aad58, type: 3}
+  S_Fishing: {fileID: 21300000, guid: ec5173b0c9b29b5498983b4951672759, type: 3}
 --- !u!114 &114651293537240184
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -6981,14 +7085,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8020c53bbe82c5c4088c7e6ceb7f4d66, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Particles:
-  - {fileID: 1194246060422600, guid: 15181be2195f1e0468a5600eba874099, type: 2}
-  - {fileID: 1602512909760464, guid: 772a89ea71055ba4a9434d896651dfa2, type: 2}
-  - {fileID: 1969406654432958, guid: ac603292e6b17c245b09685c59ee8970, type: 2}
-  constFire: {fileID: 1519057594522938, guid: cd7786b8dd0bd3e4d928c15f70f1b768, type: 2}
-  BurstFire: {fileID: 1653879315611720, guid: f837bf8591e31144480b59d1150d8a4e, type: 2}
+  m_topspawner: {fileID: 4233531911393396}
   m_ProgVirus: 0
-  m_SphereSize: 0
 --- !u!114 &114683521219258144
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -7060,6 +7158,48 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   UsbPort: {fileID: 1080032176102612}
   screen: {fileID: 1474868425620186}
+--- !u!114 &114732777246083830
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1809247466516998}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 140a42b70e904e24bb54a37ae0ebe84d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Fish: {fileID: 1969406654432958, guid: ac603292e6b17c245b09685c59ee8970, type: 2}
+  Dart: {fileID: 1194246060422600, guid: 15181be2195f1e0468a5600eba874099, type: 2}
+  Worm: {fileID: 1147816055821996, guid: 7fbf3d5d6ebb52b44ac098459dd8bf2a, type: 2}
+  RansomBox: {fileID: 1167309487123678, guid: 6eb6b7dd4b4a01d4184909c76a6c172f, type: 2}
+  ConstFire: {fileID: 1519057594522938, guid: cd7786b8dd0bd3e4d928c15f70f1b768, type: 2}
+  Burst: {fileID: 1653879315611720, guid: f837bf8591e31144480b59d1150d8a4e, type: 2}
+  Garden: {fileID: 1008797909847432, guid: 8b64a017dea81514a912053b6cdfec49, type: 2}
+  S_Trojan: {fileID: 21300000, guid: 05c291fc5bdc3e946bbda04e036152fc, type: 3}
+  S_Worm: {fileID: 21300000, guid: b789062da0152694f9cf8f6af56aad58, type: 3}
+  S_Fishing: {fileID: 21300000, guid: ec5173b0c9b29b5498983b4951672759, type: 3}
+--- !u!114 &114740232581536820
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1703311527036440}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 140a42b70e904e24bb54a37ae0ebe84d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Fish: {fileID: 1969406654432958, guid: ac603292e6b17c245b09685c59ee8970, type: 2}
+  Dart: {fileID: 1194246060422600, guid: 15181be2195f1e0468a5600eba874099, type: 2}
+  Worm: {fileID: 1147816055821996, guid: 7fbf3d5d6ebb52b44ac098459dd8bf2a, type: 2}
+  RansomBox: {fileID: 1167309487123678, guid: 6eb6b7dd4b4a01d4184909c76a6c172f, type: 2}
+  ConstFire: {fileID: 1519057594522938, guid: cd7786b8dd0bd3e4d928c15f70f1b768, type: 2}
+  Burst: {fileID: 1653879315611720, guid: f837bf8591e31144480b59d1150d8a4e, type: 2}
+  Garden: {fileID: 1008797909847432, guid: 8b64a017dea81514a912053b6cdfec49, type: 2}
+  S_Trojan: {fileID: 21300000, guid: 05c291fc5bdc3e946bbda04e036152fc, type: 3}
+  S_Worm: {fileID: 21300000, guid: b789062da0152694f9cf8f6af56aad58, type: 3}
+  S_Fishing: {fileID: 21300000, guid: ec5173b0c9b29b5498983b4951672759, type: 3}
 --- !u!114 &114746192950426062
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -7135,14 +7275,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8020c53bbe82c5c4088c7e6ceb7f4d66, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Particles:
-  - {fileID: 1194246060422600, guid: 15181be2195f1e0468a5600eba874099, type: 2}
-  - {fileID: 1602512909760464, guid: 772a89ea71055ba4a9434d896651dfa2, type: 2}
-  - {fileID: 1969406654432958, guid: ac603292e6b17c245b09685c59ee8970, type: 2}
-  constFire: {fileID: 1519057594522938, guid: cd7786b8dd0bd3e4d928c15f70f1b768, type: 2}
-  BurstFire: {fileID: 1653879315611720, guid: f837bf8591e31144480b59d1150d8a4e, type: 2}
+  m_topspawner: {fileID: 4073227486253038}
   m_ProgVirus: 0
-  m_SphereSize: 0
 --- !u!114 &114819272922725742
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -7259,14 +7393,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8020c53bbe82c5c4088c7e6ceb7f4d66, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Particles:
-  - {fileID: 1194246060422600, guid: 15181be2195f1e0468a5600eba874099, type: 2}
-  - {fileID: 1602512909760464, guid: 772a89ea71055ba4a9434d896651dfa2, type: 2}
-  - {fileID: 1969406654432958, guid: ac603292e6b17c245b09685c59ee8970, type: 2}
-  constFire: {fileID: 1519057594522938, guid: cd7786b8dd0bd3e4d928c15f70f1b768, type: 2}
-  BurstFire: {fileID: 1653879315611720, guid: f837bf8591e31144480b59d1150d8a4e, type: 2}
+  m_topspawner: {fileID: 4554222696655680}
   m_ProgVirus: 0
-  m_SphereSize: 0
 --- !u!114 &114946788565409522
 MonoBehaviour:
   m_ObjectHideFlags: 1

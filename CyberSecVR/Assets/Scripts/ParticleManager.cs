@@ -134,13 +134,8 @@ namespace Virus
                 t_pos.y = 2f;
 
                 GameObject t_fishParticle;
-<<<<<<< HEAD
                 t_fishParticle = (GameObject)Instantiate(m_Prefab.Fish, t_pos, Quaternion.identity);
-                Destroy(t_fishParticle, 5f);
-=======
-                t_fishParticle = (GameObject)Instantiate(m_Particles[2], t_pos, Quaternion.identity);
-             //   Destroy(t_fishParticle, 5f);
->>>>>>> origin/master
+                //Destroy(t_fishParticle, 5f);
             }
 
         }
@@ -169,14 +164,9 @@ namespace Virus
                 T.gameObject.SetActive(false);
             }
 
-
-<<<<<<< HEAD
             Vector3 t_pos = transform.position += new Vector3(0, 0.1f, 0);
             GameObject T_box = (GameObject)Instantiate(m_Prefab.RansomBox, t_pos, Quaternion.identity, transform);
-=======
-            Vector3 t_pos = transform.position;// += new Vector3(0, 0.1f, 0);
-            GameObject T_box = (GameObject)Instantiate(RansomBox, t_pos, Quaternion.identity, transform);
->>>>>>> origin/master
+
             // T_box.SetActive(true);
             //if gold collides
             //destroy chest & gold 
@@ -200,7 +190,7 @@ namespace Virus
         }
         private void Rogue()
         {
-            }
+            
 
         }
         private void MIM()
