@@ -8,7 +8,7 @@ public class lightsaber : MonoBehaviour {
 	public Transform endPos;
 
 	private float textureOffset = 0f;
-	private bool on = true;
+	public bool on = true;
 	private Vector3 endPosExtendedPos;
 
 	// Use this for initialization
@@ -41,7 +41,7 @@ public class lightsaber : MonoBehaviour {
 		//hide line//
 		else
 		{
-			endPos.localPosition = Vector3.Lerp(endPos.localPosition,startPos.localPosition,Time.deltaTime*5f);
+			endPos.localPosition = Vector3.Lerp(endPos.localPosition,startPos.localPosition,Time.deltaTime*5.0f);
 		}
 
 		//update line positions//
