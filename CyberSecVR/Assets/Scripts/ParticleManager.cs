@@ -19,6 +19,7 @@ namespace Virus
         private Transform t_target;
         public int m_SphereSize;
 
+        private NewtonVR.NVRInteractableItem[] NVRScript;
         private GameObject t_const;
         //private bool deedDone;
         // Use this for initialization
@@ -36,6 +37,7 @@ namespace Virus
                 }
             }
 
+            NVRScript = GameObject.FindObjectsOfType<NewtonVR.NVRInteractableItem>();
         }
 
 
@@ -190,6 +192,11 @@ namespace Virus
         }
         private void Rogue()
         {
+            foreach (NewtonVR.NVRInteractableItem N in NVRScript)
+            {
+                N.gameObject.GetComponent<Rigidbody>().useGravity = false;
+
+            }
 
         }
         private void MIM()

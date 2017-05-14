@@ -43,6 +43,8 @@ public class Blender : MonoBehaviour {
     [SerializeField]
     GameObject USBObject;
 
+    private AudioSource AS;
+    public AudioClip[] AC;
 	[System.Serializable]
 	public struct objectPairWithOutput
 	{
@@ -58,6 +60,7 @@ public class Blender : MonoBehaviour {
     // Use this for initialization
     void Start () {
         collectedObjects = new List<CombinableObjectType>();
+        AS = gameObject.GetComponent<AudioSource>();
 	}
 	
 	// Update is called once per frame
@@ -109,9 +112,23 @@ public class Blender : MonoBehaviour {
                 print("USB");
                 GameObject usb = Instantiate(USBObject);
                 usb.GetComponent<UsbProgram>().program = outputs[i].output;
+                PlayThisClip(usb.GetComponent<UsbProgram>().program.ToString());
+
+
                 return usb;
 			}
 		}
 		return null;
 	}
+
+    public void PlayThisClip(string clipName)
+    {
+        foreach(AudioClip clip in AC)
+        {
+           if(clipName == clip.name)
+            {
+                AS.PlayOneShot(clip);
+            }
+        }
+    }
 }
