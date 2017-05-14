@@ -37,7 +37,8 @@ public class Blender : MonoBehaviour
         KnightPieceChess,
         Horse,
         Flower,
-        Garden
+        Garden,
+        Log
     }
 
     [SerializeField]

@@ -896,8 +896,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1407419185131824}
-  m_LocalRotation: {x: -0, y: 0.99341774, z: -0, w: -0.11454781}
-  m_LocalPosition: {x: 0.7, y: 0.912, z: 1.493}
+  m_LocalRotation: {x: -0, y: 0.75131816, z: -0, w: -0.6599402}
+  m_LocalPosition: {x: 1.355, y: 0.829, z: 0.268}
   m_LocalScale: {x: 0.616801, y: 0.61680096, z: 0.61680096}
   m_Children:
   - {fileID: 4961019670508244}
@@ -906,7 +906,7 @@ Transform:
   - {fileID: 4765620710243988}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 193.155, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 262.591, z: 0}
 --- !u!23 &23022541740304914
 MeshRenderer:
   m_ObjectHideFlags: 1
@@ -1503,7 +1503,7 @@ HingeJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 0, y: 0, z: 1}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 0.21338308, y: 1.226, z: 1.4557769}
+  m_ConnectedAnchor: {x: 1.1492193, y: 1.1429999, z: 0.7105335}
   m_UseSpring: 0
   m_Spring:
     spring: 0
@@ -1523,7 +1523,7 @@ HingeJoint:
     contactDistance: 0
   m_BreakForce: Infinity
   m_BreakTorque: Infinity
-  m_EnableCollision: 0
+  m_EnableCollision: 1
   m_EnablePreprocessing: 0
 --- !u!64 &64406648573172850
 MeshCollider:
@@ -1790,12 +1790,24 @@ MonoBehaviour:
   outputs:
   - collectedObjects: 0700000001000000
     output: 1
-  - collectedObjects: 0d00000001000000
+  - collectedObjects: 0d00000011000000
     output: 5
   - collectedObjects: 050000001b000000
     output: 2
   - collectedObjects: 0f00000004000000
     output: 4
+  - collectedObjects: 0a00000008000000
+    output: 3
+  - collectedObjects: 120000001e000000
+    output: 6
+  - collectedObjects: 1600000011000000
+    output: 7
+  - collectedObjects: 1700000005000000
+    output: 8
+  - collectedObjects: 010000000b000000
+    output: 9
+  - collectedObjects: 1e0000001c000000
+    output: 12
 --- !u!114 &114518265381325726
 MonoBehaviour:
   m_ObjectHideFlags: 1

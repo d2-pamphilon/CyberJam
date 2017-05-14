@@ -56,6 +56,7 @@ GameObject:
   - component: {fileID: 4912184514828538}
   - component: {fileID: 33427286857382740}
   - component: {fileID: 23533763551269446}
+  - component: {fileID: 64490666473251496}
   m_Layer: 0
   m_Name: pCube1
   m_TagString: Untagged
@@ -70,7 +71,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1084850631032022}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.8830311, y: 0.078838915, z: 4.2257123}
+  m_LocalPosition: {x: 1.0044287, y: 0.943813, z: 1.7768493}
   m_LocalScale: {x: 10, y: 10, z: 10}
   m_Children:
   - {fileID: 4830556495638252}
@@ -141,7 +142,7 @@ MeshFilter:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1363169738357944}
-  m_Mesh: {fileID: 4300000, guid: 6591e915ae93bc6428ba22c66a6c014d, type: 3}
+  m_Mesh: {fileID: 4300000, guid: e0e678e82973f44429adfe0003d16f1f, type: 3}
 --- !u!54 &54404633829807728
 Rigidbody:
   m_ObjectHideFlags: 1
@@ -157,6 +158,20 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!64 &64490666473251496
+MeshCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1363169738357944}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Convex: 0
+  m_InflateMesh: 0
+  m_SkinWidth: 0.01
+  m_Mesh: {fileID: 4300000, guid: e0e678e82973f44429adfe0003d16f1f, type: 3}
 --- !u!95 &95411851494750916
 Animator:
   serializedVersion: 3
