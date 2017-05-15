@@ -115,9 +115,56 @@ public class Blender : MonoBehaviour
                 print("USB");
                 GameObject usb = Instantiate(USBObject);
                 usb.GetComponent<UsbProgram>().program = outputs[i].output;
+                playCreationSound(outputs[i].output);
                 return usb;
             }
         }
         return null;
+    }
+
+    void playCreationSound(UsbProgram.Program prog)
+    {
+        AudioClip clip = Resources.Load<AudioClip>("Sounds/" + prog.ToString());
+        if (clip)
+        {
+            AudioSource.PlayClipAtPoint(clip, transform.position);
+        }
+        /*
+        switch (prog)
+        {
+            case UsbProgram.Program.NONE:
+                break;
+            case UsbProgram.Program.BackDoor:
+                AudioSource.PlayClipAtPoint(Resources.Load<AudioClip>("Sounds/"), transform.position);
+                break;
+            case UsbProgram.Program.BruteForce:
+                AudioSource.PlayClipAtPoint(Resources.Load<AudioClip>("Sounds/"), transform.position);
+                break;
+            case UsbProgram.Program.DDOS: //fire particles
+                AudioSource.PlayClipAtPoint(Resources.Load<AudioClip>("Sounds/"), transform.position);
+                break;
+            case UsbProgram.Program.PhishingAttack: // All the fish
+                AudioSource.PlayClipAtPoint(Resources.Load<AudioClip>("Sounds/"), transform.position);
+                break;
+            case UsbProgram.Program.KeyLogger:
+                AudioSource.PlayClipAtPoint(Resources.Load<AudioClip>("Sounds/"), transform.position);
+                break;
+            case UsbProgram.Program.RansomVirus: //Money
+                AudioSource.PlayClipAtPoint(Resources.Load<AudioClip>("Sounds/"), transform.position);
+                break;
+            case UsbProgram.Program.RogueSoftware:
+                AudioSource.PlayClipAtPoint(Resources.Load<AudioClip>("Sounds/"), transform.position);
+                break;
+            case UsbProgram.Program.TrojanHorse: //Arrow fired into the PC
+                AudioSource.PlayClipAtPoint(Resources.Load<AudioClip>("Sounds/"), transform.position);
+                break;
+            case UsbProgram.Program.Worms:
+                AudioSource.PlayClipAtPoint(Resources.Load<AudioClip>("Sounds/"), transform.position);
+                break;
+            case UsbProgram.Program.DNS:
+                
+                break;
+        }
+        */
     }
 }

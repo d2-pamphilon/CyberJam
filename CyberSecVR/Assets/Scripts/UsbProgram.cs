@@ -16,9 +16,8 @@ public class UsbProgram : MonoBehaviour {
         Worms,
         BackDoor,
         BruteForce,
-        DNS,
-        MIM,
-        Garden
+        Garden,
+        LAST
     }
 
     public Program program;

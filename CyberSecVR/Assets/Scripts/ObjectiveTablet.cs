@@ -63,8 +63,8 @@ public class ObjectiveTablet : MonoBehaviour {
             case UsbProgram.Program.Worms:
                 text.text = "Worm Virus";
                 break;
-            case UsbProgram.Program.DNS:
-                text.text = "DNS Attack";
+            case UsbProgram.Program.Garden:
+                text.text = "PeacefulGarden.exe";
                 break;
             default:
                 int i = 0;
@@ -78,7 +78,6 @@ public class ObjectiveTablet : MonoBehaviour {
                 case UsbProgram.Program.NONE:
                     break;
                 case UsbProgram.Program.BackDoor:
-                    hintImage.overrideSprite = Resources.Load<Sprite>("Textures/sprite");
                     hintImage.overrideSprite = Resources.Load<Sprite>("Hints/BackDoor");
                     break;
                 case UsbProgram.Program.BruteForce:
@@ -94,7 +93,7 @@ public class ObjectiveTablet : MonoBehaviour {
                     hintImage.overrideSprite = Resources.Load<Sprite>("Hints/KeyLogger");
                     break;
                 case UsbProgram.Program.RansomVirus: //Money
-                    hintImage.overrideSprite = Resources.Load<Sprite>("Hints/Ransom");
+                    hintImage.overrideSprite = Resources.Load<Sprite>("Hints/Worm");
                     break;
                 case UsbProgram.Program.RogueSoftware:
                     hintImage.overrideSprite = Resources.Load<Sprite>("Hints/Rogue");
@@ -105,8 +104,8 @@ public class ObjectiveTablet : MonoBehaviour {
                 case UsbProgram.Program.Worms:
                     hintImage.overrideSprite = Resources.Load<Sprite>("Hints/Worm");
                     break;
-                case UsbProgram.Program.DNS:
-                    hintImage.overrideSprite = Resources.Load<Sprite>("Hints/DNS");
+                case UsbProgram.Program.Garden:
+                    hintImage.overrideSprite = Resources.Load<Sprite>("Hints/Garden");
                     break;
             }
         }

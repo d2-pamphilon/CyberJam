@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using System;
 using UnityEngine;
+using NewtonVR;
+using UnityEngine.UI;
 
 namespace Virus
 {
@@ -63,16 +65,12 @@ namespace Virus
                 //DNS();
                 //    break;
                 case UsbProgram.Program.DDOS: //fire particles
-
-
                     t_const = Instantiate(m_Prefab.ConstFire, t_target.position, Quaternion.Euler(-90f, 0f, 0f));
                     GameObject t_burst = (GameObject)Instantiate(m_Prefab.Burst, t_target.position, Quaternion.identity);
 
                     Destroy(t_burst, 5f);
                     Destroy(t_const, 60f);
                     //Destroy(t_const, 10f);
-
-
                     break;
                 case UsbProgram.Program.PhishingAttack: // All the fish
                     fishspawner();
@@ -181,19 +179,9 @@ namespace Virus
             }
 
         }
-        public void stopFire()
-        {
-            Destroy(t_const);
-        }
         private void Rogue()
         {
-            foreach(NewtonVR.NVRInteractable g in t)
-            {
-                g.GetComponent<Rigidbody>().useGravity = false;
-            }
-
-
-
+            
         }
         private void MIM()
         {
@@ -201,18 +189,44 @@ namespace Virus
         }
         private void KeyLogger()
         {
-
+            Text[] objects = GameObject.FindObjectsOfType<Text>();
+            foreach (var obj in objects)
+            {
+                obj.text = "All your keypresses have been sent to us, Love, Hackers ;)";
+            }
         }
-        
-       
+
         private void Force()
         {
-            print("force");
+            NVRInteractableItem[] objects = GameObject.FindObjectsOfType<NVRInteractableItem>();
+            foreach (var obj in objects)
+            {
+                obj.gameObject.GetComponent<Rigidbody>().useGravity = false;
+            }
+
+            StartCoroutine("resetGravity");
+
+        }
+
+        IEnumerator resetGravity()
+        {
+            yield return new WaitForSeconds(30.0f);
+            NVRInteractableItem[] objects = GameObject.FindObjectsOfType<NVRInteractableItem>();
+            foreach (var obj in objects)
+            {
+                obj.gameObject.GetComponent<Rigidbody>().useGravity = true;
+            }
 
         }
         private void Door()
         {
+            NVRHand[] hands = GameObject.FindObjectsOfType<NVRHand>();
 
+            foreach (var hand in hands)
+            {
+                hand.gameObject.GetComponentInChildren<MeshFilter>().mesh = Resources.Load<Mesh>("Meshes/Door");
+                hand.gameObject.GetComponentInChildren<MeshRenderer>().material = Resources.Load<Material>("Meshes/DoorMat");
+            }
         }
         private void Garden()
         {

@@ -22,6 +22,10 @@ public class UsbGrabber : MonoBehaviour
             other.GetComponent<Rigidbody>().velocity = Vector3.zero;
             other.GetComponent<UsbProgram>().inSlot = true;
             free = false;
+
+            GameManager.instance.checkProgram(other.GetComponent<UsbProgram>().program);
+
+            Destroy(other.gameObject);
         }
     }
 
@@ -32,7 +36,6 @@ public class UsbGrabber : MonoBehaviour
             other.gameObject.GetComponent<UsbProgram>().inSlot = false;
             free = true;
             GetComponentInParent<ComputerController>().exitProgram();
-            GetComponentInParent<Virus.ParticleManager>().stopFire();
         }
 
     }
