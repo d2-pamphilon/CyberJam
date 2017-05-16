@@ -25,6 +25,7 @@ GameObject:
   - component: {fileID: 114824661789147434}
   - component: {fileID: 54484187400775778}
   - component: {fileID: 114383692979105046}
+  - component: {fileID: 114975697152264636}
   m_Layer: 0
   m_Name: Compuer Mouse
   m_TagString: Untagged
@@ -166,3 +167,15 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
       PublicKeyToken=null
+--- !u!114 &114975697152264636
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1932717889941386}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5acc68a2ecf98824ba3f8fa739c53028, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  collisionSounds: []

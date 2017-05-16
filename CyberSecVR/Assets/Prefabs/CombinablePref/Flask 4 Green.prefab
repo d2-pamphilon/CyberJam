@@ -104,6 +104,7 @@ GameObject:
   - component: {fileID: 54675216054564570}
   - component: {fileID: 114549382646910202}
   - component: {fileID: 114026753823024472}
+  - component: {fileID: 114356761986389330}
   m_Layer: 0
   m_Name: Flask 4 Green
   m_TagString: Untagged
@@ -447,6 +448,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   type: 17
+--- !u!114 &114356761986389330
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1743330049908366}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5acc68a2ecf98824ba3f8fa739c53028, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  collisionSounds: []
 --- !u!114 &114549382646910202
 MonoBehaviour:
   m_ObjectHideFlags: 1

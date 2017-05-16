@@ -19,13 +19,15 @@ namespace Virus
         private int m_SphereSize;
 
         private GameObject t_const;
+        bool gravity = true;
         //private bool deedDone;
         // Use this for initialization
-
+        private int counter;
 
 
         void Start()
         {
+            counter = 0;
             m_Prefab = GetComponent<PrefabSprites>();
             m_SphereSize = 2;
             // deedDone = false;
@@ -49,7 +51,7 @@ namespace Virus
         // Update is called once per frame
         void Update()
         {
-
+            
 
             switch (m_ProgVirus)
             {
@@ -84,9 +86,7 @@ namespace Virus
                 case UsbProgram.Program.RansomVirus: //Money
                     Ransom();
                     break;
-                case UsbProgram.Program.RogueSoftware:
-                    Rogue(); //Tia Fighter
-                    break;
+                
                 case UsbProgram.Program.TrojanHorse: //Arrow fired into the PC
                     DartSpawner();
                     break;
@@ -94,11 +94,27 @@ namespace Virus
                     Worm();
                     break;
                 case UsbProgram.Program.Garden:
-                    Garden();
+                   // Garden();
                     break;
 
             }
             m_ProgVirus = UsbProgram.Program.NONE;
+
+            if (!gravity&&counter>=60)
+            {
+                NVRInteractableItem[] objects = GameObject.FindObjectsOfType<NVRInteractableItem>();
+                foreach (var obj in objects)
+                {
+                    var rigidbody = obj.gameObject.GetComponent<Rigidbody>();
+                    if (rigidbody)
+                    {
+                        rigidbody.useGravity = false;
+                        //rigidbody.AddForce(new Vector3(0, 0.0001f, 0));
+                    }
+                }
+                counter = 0;
+            }
+            counter++;
         }
 
 
@@ -162,14 +178,7 @@ namespace Virus
             Vector3 t_pos = transform.position += new Vector3(0, 0.1f, 0);
             GameObject T_box = (GameObject)Instantiate(m_Prefab.RansomBox, t_pos, Quaternion.identity, transform);
 
-            // T_box.SetActive(true);
-            //if gold collides
-            //destroy chest & gold 
-            //turn children on 
-            //clear list
 
-
-            //   Instantiate(m_Particles[3], transform.position, Quaternion.identity);
         }
         public void ransomOff()
         {
@@ -177,12 +186,8 @@ namespace Virus
             {
                 T.gameObject.SetActive(true);
             }
-
         }
-        private void Rogue()
-        {
-            
-        }
+ 
         private void MIM()
         {
 
@@ -198,10 +203,17 @@ namespace Virus
 
         private void Force()
         {
+            gravity = false;
+            counter = 0;
             NVRInteractableItem[] objects = GameObject.FindObjectsOfType<NVRInteractableItem>();
             foreach (var obj in objects)
             {
-                obj.gameObject.GetComponent<Rigidbody>().useGravity = false;
+                var rigidbody = obj.gameObject.GetComponent<Rigidbody>();
+                if (rigidbody)
+                { 
+                    rigidbody.useGravity = false;
+                    rigidbody.AddForce(new Vector3(0, 10f, 0));
+                }
             }
 
             StartCoroutine("resetGravity");
@@ -209,12 +221,17 @@ namespace Virus
         }
 
         IEnumerator resetGravity()
-        {
-            yield return new WaitForSeconds(30.0f);
+        {           
+            yield return new WaitForSeconds(60.0f);
+            gravity = true;
             NVRInteractableItem[] objects = GameObject.FindObjectsOfType<NVRInteractableItem>();
             foreach (var obj in objects)
             {
-                obj.gameObject.GetComponent<Rigidbody>().useGravity = true;
+                var rigidbody = obj.gameObject.GetComponent<Rigidbody>();
+                if (rigidbody)
+                {
+                    rigidbody.useGravity = true;
+                }
             }
 
         }
@@ -239,19 +256,7 @@ namespace Virus
             }
 
         }
-
-
-
-
-
-
     }
-
-
 
 }
 
-
-
-//{
-//       }

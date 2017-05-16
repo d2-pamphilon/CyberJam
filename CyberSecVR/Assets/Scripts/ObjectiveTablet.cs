@@ -54,9 +54,7 @@ public class ObjectiveTablet : MonoBehaviour {
             case UsbProgram.Program.RansomVirus: //Money
                 text.text = "Ransom Virus";
                 break;
-            case UsbProgram.Program.RogueSoftware:
-                text.text = "Rogue Software";
-                break;
+           
             case UsbProgram.Program.TrojanHorse: //Arrow fired into the PC
                 text.text = "Trojan Horse";
                 break;
@@ -95,9 +93,7 @@ public class ObjectiveTablet : MonoBehaviour {
                 case UsbProgram.Program.RansomVirus: //Money
                     hintImage.overrideSprite = Resources.Load<Sprite>("Hints/Worm");
                     break;
-                case UsbProgram.Program.RogueSoftware:
-                    hintImage.overrideSprite = Resources.Load<Sprite>("Hints/Rogue");
-                    break;
+               
                 case UsbProgram.Program.TrojanHorse: //Arrow fired into the PC
                     hintImage.overrideSprite = Resources.Load<Sprite>("Hints/Trojan");
                     break;

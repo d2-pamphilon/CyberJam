@@ -27,17 +27,21 @@ namespace ComputerScreen
         // Update is called once per frame
         void Update()
         {
-           
+
             // if (m_virus == UsbProgram.Program.PhishingAttack)
-            if ( m_virus != UsbProgram.Program.NONE)
+            if (m_virus != UsbProgram.Program.NONE)
             {
                 m_Image.color = Color.white;
             }
-          
+            else
+            {
+                m_Image.color = Color.black;
+            }
+
             switch (m_virus)
             {
                 case UsbProgram.Program.PhishingAttack:
-                    
+
                     m_Canvas.enabled = true;
                     m_Image.sprite = m_Sprite.S_Fishing;
                     break;
@@ -49,10 +53,7 @@ namespace ComputerScreen
                     m_Canvas.enabled = true;
                     m_Image.sprite = m_Sprite.S_Worm;
                     break;
-                default:
-                    m_Canvas.enabled = false;
-                    m_Image.color = Color.black;
-                    break;
+
             }
         }
 

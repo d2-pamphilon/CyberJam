@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.Audio;
 
 public class ScientistController : MonoBehaviour
 {
@@ -24,6 +25,9 @@ public class ScientistController : MonoBehaviour
     [SerializeField]
     // private bool m_parented;
     public float m_lookRadius;
+    
+    public AudioClip[] pickupSounds;
+    public AudioClip[] activateSounds;
 
     private GameObject t_hand;
 
@@ -105,6 +109,7 @@ public class ScientistController : MonoBehaviour
                     m_usbToGrab.transform.rotation = Quaternion.Euler(0, 0, -90);
                     m_usbToGrab.transform.localScale = new Vector3(0.1f, 0.1f, 0.1f);
                     m_usbToGrab.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeRotation;
+                    AudioSource.PlayClipAtPoint(pickupSounds[Random.Range(0, pickupSounds.Length)], transform.position);
                     movmentState = state.seekingPC;
                     foundslot = false;
                 }
@@ -119,6 +124,7 @@ public class ScientistController : MonoBehaviour
                         {
                             usbWaypoint = G.gameObject.transform;
                             m_usbToGrab.GetComponent<UsbProgram>().inSlot = true;
+                            
                             foundslot = true;
                             break;
                         }
@@ -134,6 +140,7 @@ public class ScientistController : MonoBehaviour
                     m_usbToGrab.transform.localScale = new Vector3(0.023f, 0.023f, 0.023f);
                     m_usbToGrab.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.None;
                     m_usbToGrab.transform.position = usbWaypoint.position;// += new Vector3(0f, 0.1f, 0f);
+                    AudioSource.PlayClipAtPoint(activateSounds[Random.Range(0, activateSounds.Length)], transform.position);
                     movmentState = state.partoling;
                 }
                 break;

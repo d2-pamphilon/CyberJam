@@ -1796,11 +1796,11 @@ MonoBehaviour:
     output: 2
   - collectedObjects: 0f00000004000000
     output: 4
-  - collectedObjects: 0a00000008000000
+  - collectedObjects: 0a00000009000000
     output: 3
   - collectedObjects: 120000001e000000
     output: 6
-  - collectedObjects: 1600000011000000
+  - collectedObjects: 1500000011000000
     output: 7
   - collectedObjects: 1700000005000000
     output: 8

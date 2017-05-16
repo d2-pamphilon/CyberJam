@@ -40,6 +40,7 @@ GameObject:
   - component: {fileID: 114502262099501542}
   - component: {fileID: 54340111925534492}
   - component: {fileID: 114909722592729084}
+  - component: {fileID: 114755236898226680}
   m_Layer: 0
   m_Name: Spider
   m_TagString: Untagged
@@ -67,8 +68,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1310407582041170}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.7021291, y: 0.09365616, z: -0.990126}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: -2.7581, y: 0.09365616, z: -0.990126}
+  m_LocalScale: {x: 0.2, y: 0.2, z: 0.2}
   m_Children:
   - {fileID: 4210098321383574}
   m_Father: {fileID: 0}
@@ -186,6 +187,18 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
       PublicKeyToken=null
+--- !u!114 &114755236898226680
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1310407582041170}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5acc68a2ecf98824ba3f8fa739c53028, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  collisionSounds: []
 --- !u!114 &114909722592729084
 MonoBehaviour:
   m_ObjectHideFlags: 1

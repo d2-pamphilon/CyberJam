@@ -24,6 +24,8 @@ GameObject:
   - component: {fileID: 54930351819898576}
   - component: {fileID: 65827784982747244}
   - component: {fileID: 114021114757338530}
+  - component: {fileID: 114634949958779684}
+  - component: {fileID: 114231292170919552}
   m_Layer: 0
   m_Name: worm
   m_TagString: Untagged
@@ -353,3 +355,28 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
       PublicKeyToken=null
+--- !u!114 &114231292170919552
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1147816055821996}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5acc68a2ecf98824ba3f8fa739c53028, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  collisionSounds: []
+--- !u!114 &114634949958779684
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1147816055821996}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf95e7a4d6be5c843ad08864c27fd6f5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 1
+  worm: {fileID: 1147816055821996}

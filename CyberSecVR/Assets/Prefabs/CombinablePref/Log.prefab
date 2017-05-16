@@ -26,6 +26,7 @@ GameObject:
   - component: {fileID: 114546082102282906}
   - component: {fileID: 114267648042592732}
   - component: {fileID: 64686119116424590}
+  - component: {fileID: 114941966739145788}
   m_Layer: 0
   m_Name: Log
   m_TagString: Untagged
@@ -186,3 +187,15 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
       PublicKeyToken=null
+--- !u!114 &114941966739145788
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1029526343881396}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5acc68a2ecf98824ba3f8fa739c53028, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  collisionSounds: []

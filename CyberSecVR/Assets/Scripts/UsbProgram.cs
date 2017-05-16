@@ -9,7 +9,6 @@ public class UsbProgram : MonoBehaviour {
         NONE,
         PhishingAttack,
         TrojanHorse,
-        RogueSoftware,
         DDOS,
         RansomVirus,
         KeyLogger,

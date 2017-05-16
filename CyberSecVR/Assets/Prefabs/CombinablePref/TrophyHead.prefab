@@ -40,6 +40,7 @@ GameObject:
   - component: {fileID: 114915993678448298}
   - component: {fileID: 54536421413469646}
   - component: {fileID: 65945259684459658}
+  - component: {fileID: 114058237973059606}
   m_Layer: 0
   m_Name: TrophyHead
   m_TagString: Untagged
@@ -205,6 +206,18 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &114058237973059606
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1384005281119980}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5acc68a2ecf98824ba3f8fa739c53028, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  collisionSounds: []
 --- !u!114 &114731756667711728
 MonoBehaviour:
   m_ObjectHideFlags: 1

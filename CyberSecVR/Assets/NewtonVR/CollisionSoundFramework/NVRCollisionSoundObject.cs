@@ -8,13 +8,27 @@ namespace NewtonVR
     {
         private static Dictionary<Collider, NVRCollisionSoundObject> SoundObjects = new Dictionary<Collider, NVRCollisionSoundObject>();
 
-        public NVRCollisionSoundMaterials Material;
+        private NVRCollisionSoundMaterials Material;
+        public List<AudioClip> collisionSounds;
 
         private Collider[] Colliders;
 
 
         protected virtual void Awake()
         {
+            collisionSounds = new List<AudioClip>();
+
+            collisionSounds.Add(Resources.Load<AudioClip>("Ding1-High"));
+            collisionSounds.Add(Resources.Load<AudioClip>("Ding1-Normal"));
+            collisionSounds.Add(Resources.Load<AudioClip>("Ding1-Low"));
+            collisionSounds.Add(Resources.Load<AudioClip>("Splat1-Normal"));
+            collisionSounds.Add(Resources.Load<AudioClip>("Splat1-Low"));
+            collisionSounds.Add(Resources.Load<AudioClip>("Splat1-High"));
+            collisionSounds.Add(Resources.Load<AudioClip>("Thunk1-High"));
+            collisionSounds.Add(Resources.Load<AudioClip>("Thunk1-Low"));
+            collisionSounds.Add(Resources.Load<AudioClip>("Thunk1-Normal"));
+
+
             Colliders = this.GetComponentsInChildren<Collider>(true);
 
             for (int index = 0; index < Colliders.Length; index++)
@@ -47,8 +61,8 @@ namespace NewtonVR
                     return;
                 }
 
-                NVRCollisionSoundController.Play(this.Material, collision.contacts[0].point, volume);
-                NVRCollisionSoundController.Play(collisionSoundObject.Material, collision.contacts[0].point, volume);
+                AudioSource.PlayClipAtPoint(this.collisionSounds[Random.Range(0, collisionSounds.Count)], collision.contacts[0].point, volume);
+                AudioSource.PlayClipAtPoint(collisionSoundObject.collisionSounds[Random.Range(0, collisionSounds.Count)], collision.contacts[0].point, volume);
             }
         }
 

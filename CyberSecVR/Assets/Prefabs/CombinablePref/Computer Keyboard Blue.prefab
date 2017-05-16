@@ -40,6 +40,7 @@ GameObject:
   - component: {fileID: 114581016173382766}
   - component: {fileID: 114837107966438534}
   - component: {fileID: 54174009037724208}
+  - component: {fileID: 114347897719028982}
   m_Layer: 0
   m_Name: Computer Keyboard Blue
   m_TagString: Untagged
@@ -181,6 +182,18 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.9093385, y: 0.01789701, z: 0.2629603}
   m_Center: {x: 0.0000019073486, y: -0.03232176, z: 0}
+--- !u!114 &114347897719028982
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1546572633872332}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5acc68a2ecf98824ba3f8fa739c53028, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  collisionSounds: []
 --- !u!114 &114581016173382766
 MonoBehaviour:
   m_ObjectHideFlags: 1

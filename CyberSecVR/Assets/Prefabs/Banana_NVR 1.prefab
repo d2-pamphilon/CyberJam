@@ -100,7 +100,7 @@ GameObject:
   - component: {fileID: 4003825901289894}
   - component: {fileID: 54389425419551660}
   - component: {fileID: 114376050930713848}
-  - component: {fileID: 114935013646061166}
+  - component: {fileID: 114584501082504202}
   m_Layer: 0
   m_Name: Banana_NVR 1
   m_TagString: Untagged
@@ -387,7 +387,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
       PublicKeyToken=null
---- !u!114 &114935013646061166
+--- !u!114 &114584501082504202
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -395,12 +395,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1706313161001616}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cf95e7a4d6be5c843ad08864c27fd6f5, type: 3}
+  m_Script: {fileID: 11500000, guid: 5acc68a2ecf98824ba3f8fa739c53028, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Timer: 0
-  m_TimerDestroy: 0
-  m_WormRB: {fileID: 0}
+  collisionSounds: []
 --- !u!136 &136093219668562724
 CapsuleCollider:
   m_ObjectHideFlags: 1
