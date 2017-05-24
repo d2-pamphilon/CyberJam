@@ -27,7 +27,7 @@ public class PrinterManager : MonoBehaviour {
         if (preview)
         {
             preview.transform.position = newObjWaypoint.transform.position;
-            preview.transform.Rotate(new Vector3(0.0f, 1.0f, 0.0f));
+            preview.transform.RotateAroundLocal(new Vector3(0.0f, 0.01f, 0.0f),0.01f);
             
         }
 

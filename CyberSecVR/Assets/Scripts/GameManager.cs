@@ -13,6 +13,9 @@ public class GameManager : MonoBehaviour {
     GameObject objectiveTab;
 
     [SerializeField]
+    GameObject spawningWaypoint;
+
+    [SerializeField]
     float timeBetweenSpawns = 60;
     float timer;
 
@@ -64,6 +67,7 @@ public class GameManager : MonoBehaviour {
     void createNewObjective()
     {
         GameObject obj = Instantiate(objectiveTab);
+        obj.transform.position = spawningWaypoint.transform.position;
         UsbProgram.Program prog = (UsbProgram.Program)((int)(Random.value * ((int)(UsbProgram.Program.LAST) -1)));
         if (prog == UsbProgram.Program.NONE)
         {
