@@ -22,6 +22,10 @@ public class PrinterManager : MonoBehaviour {
     Material previewMat;
     GameObject preview;
 
+    void Awake()
+    {
+        changePreview();
+    }
     void Update()
     {
         if (preview)
