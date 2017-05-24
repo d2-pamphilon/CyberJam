@@ -70,14 +70,26 @@ public class PrinterManager : MonoBehaviour {
         }
 
         Renderer[] renders = preview.GetComponents<Renderer>();
-        foreach (Renderer rend in renders)
+        for (int i = 0; i < renders.Length; i++)
         {
-            rend.material = previewMat;
+            renders[i].material = previewMat;
+            Material[] newMat = new Material[renders[i].materials.Length];
+            for(int j = 0; j < newMat.Length; j++)
+            {
+                newMat[j] = previewMat;
+            }
+            renders[i].materials = newMat;
         }
         Renderer[] renders2 = preview.GetComponentsInChildren<Renderer>();
-        foreach (Renderer rend in renders2)
+        for (int i = 0; i < renders2.Length; i++)
         {
-            rend.material = previewMat;
+            renders2[i].material = previewMat;
+            Material[] newMat = new Material[renders2[i].materials.Length];
+            for (int j = 0; j < newMat.Length; j++)
+            {
+                newMat[j] = previewMat;
+            }
+            renders2[i].materials = newMat;
         }
     }
 }
