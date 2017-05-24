@@ -8,7 +8,7 @@ namespace ComputerScreen
     {
 
         public UsbProgram.Program m_virus;
-        private PrefabSprites m_Sprite;
+        public PrefabSprites m_Sprite;
 
 
         private Canvas m_Canvas;
@@ -18,7 +18,7 @@ namespace ComputerScreen
         void Start()
         {
             m_virus = UsbProgram.Program.NONE;
-
+            m_Sprite = GetComponentInParent<PrefabSprites>();
             m_Canvas = GetComponentInChildren<Canvas>();
             m_Image = GetComponentInChildren<UnityEngine.UI.Image>();
 
