@@ -13,9 +13,11 @@ public class ObjectiveTablet : MonoBehaviour {
     Text hintText;
     [SerializeField]
     Image hintImage;
+    [SerializeField]
+    Image hintImage2;
 
-	// Use this for initialization
-	void Start () {
+    // Use this for initialization
+    void Start () {
         //text = transform.FindChild("Canvas").gameObject.transform.FindChild("Name").GetComponent<Text>();
         //hintText = transform.FindChild("Canvas").gameObject.transform.FindChild("Hint").GetComponent<Text>();
         //hintImage = transform.FindChild("Canvas").gameObject.transform.FindChild("HintImage").GetComponent<GUITexture>();
@@ -77,31 +79,35 @@ public class ObjectiveTablet : MonoBehaviour {
                     break;
                 case UsbProgram.Program.BackDoor:
                     hintImage.overrideSprite = Resources.Load<Sprite>("Hints/BackDoor");
+                    hintImage2.overrideSprite = Resources.Load<Sprite>("Hints/Bear");
                     break;
                 case UsbProgram.Program.BruteForce:
                     hintImage.overrideSprite = Resources.Load<Sprite>("Hints/BruteForce");
+                    hintImage2.overrideSprite = Resources.Load<Sprite>("Hints/Boxing");
                     break;
-                case UsbProgram.Program.DDOS: //fire particles
+                case UsbProgram.Program.DDOS:
                     hintImage.overrideSprite = Resources.Load<Sprite>("Hints/DDOS");
+                    hintImage2.overrideSprite = Resources.Load<Sprite>("Hints/Ball");
                     break;
-                case UsbProgram.Program.PhishingAttack: // All the fish
+                case UsbProgram.Program.PhishingAttack:
                     hintImage.overrideSprite = Resources.Load<Sprite>("Hints/Phishing");
+                    hintImage2.overrideSprite = Resources.Load<Sprite>("Hints/BruteForce");
                     break;
                 case UsbProgram.Program.KeyLogger:
                     hintImage.overrideSprite = Resources.Load<Sprite>("Hints/KeyLogger");
+                    hintImage2.overrideSprite = Resources.Load<Sprite>("Hints/Garden");
                     break;
-                case UsbProgram.Program.RansomVirus: //Money
+                case UsbProgram.Program.RansomVirus:
                     hintImage.overrideSprite = Resources.Load<Sprite>("Hints/Worm");
+                    hintImage2.overrideSprite = Resources.Load<Sprite>("Hints/GoldIngot");
                     break;
-               
-                case UsbProgram.Program.TrojanHorse: //Arrow fired into the PC
+                case UsbProgram.Program.TrojanHorse:
                     hintImage.overrideSprite = Resources.Load<Sprite>("Hints/Trojan");
+                    hintImage2.overrideSprite = Resources.Load<Sprite>("Hints/Bear");
                     break;
                 case UsbProgram.Program.Worms:
                     hintImage.overrideSprite = Resources.Load<Sprite>("Hints/Worm");
-                    break;
-                case UsbProgram.Program.Garden:
-                    hintImage.overrideSprite = Resources.Load<Sprite>("Hints/Garden");
+                    hintImage2.overrideSprite = Resources.Load<Sprite>("Hints/Spider");
                     break;
             }
         }
