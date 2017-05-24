@@ -93,9 +93,6 @@ namespace Virus
                 case UsbProgram.Program.Worms:
                     Worm();
                     break;
-                case UsbProgram.Program.Garden:
-                   // Garden();
-                    break;
 
             }
             m_ProgVirus = UsbProgram.Program.NONE;
@@ -187,11 +184,7 @@ namespace Virus
                 T.gameObject.SetActive(true);
             }
         }
- 
-        private void MIM()
-        {
 
-        }
         private void KeyLogger()
         {
             Text[] objects = GameObject.FindObjectsOfType<Text>();
@@ -245,18 +238,6 @@ namespace Virus
                 hand.gameObject.GetComponentInChildren<MeshRenderer>().material = Resources.Load<Material>("Meshes/DoorMat");
             }
         }
-        private void Garden()
-        {
-            for (int i = 0; i < 10; i++)
-            {
-                Vector2 t_pos = UnityEngine.Random.insideUnitCircle;
-
-                GameObject t_Grass = (GameObject)Instantiate(m_Prefab.Garden, new Vector3(t_pos.x, m_topspawner.position.y, t_pos.y), Quaternion.identity);
-                Destroy(t_Grass, 10f);
-            }
-
-        }
     }
-
 }
 

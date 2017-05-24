@@ -6107,13 +6107,16 @@ MonoBehaviour:
   Fish: {fileID: 1969406654432958, guid: ac603292e6b17c245b09685c59ee8970, type: 2}
   Dart: {fileID: 1194246060422600, guid: 15181be2195f1e0468a5600eba874099, type: 2}
   Worm: {fileID: 1147816055821996, guid: 7fbf3d5d6ebb52b44ac098459dd8bf2a, type: 2}
-  RansomBox: {fileID: 1871996454230290, guid: 92d23def08ebf474cb8d12ce8cc6eefe, type: 2}
+  RansomBox: {fileID: 1167309487123678, guid: 6eb6b7dd4b4a01d4184909c76a6c172f, type: 2}
   ConstFire: {fileID: 1519057594522938, guid: cd7786b8dd0bd3e4d928c15f70f1b768, type: 2}
   Burst: {fileID: 1653879315611720, guid: f837bf8591e31144480b59d1150d8a4e, type: 2}
-  Garden: {fileID: 1889535387066462, guid: 347713c0d7966144393e75bf89002a0e, type: 2}
   S_Trojan: {fileID: 21300000, guid: 05c291fc5bdc3e946bbda04e036152fc, type: 3}
   S_Worm: {fileID: 21300000, guid: b789062da0152694f9cf8f6af56aad58, type: 3}
   S_Fishing: {fileID: 21300000, guid: ec5173b0c9b29b5498983b4951672759, type: 3}
+  S_BruteForce: {fileID: 21300000, guid: 8a7ea29589a2fa942978d0e49f785873, type: 3}
+  S_BackDoor: {fileID: 21300000, guid: 292297d4978b4f746832ba69767c23a0, type: 3}
+  S_DDOS: {fileID: 21300000, guid: 31eae761180e5a04b93c842604badef6, type: 3}
+  S_KeyLog: {fileID: 21300000, guid: 803c79120f936654ebe1520d19f1c8f0, type: 3}
 --- !u!114 &114039977902705122
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -6206,10 +6209,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_virus: 0
-  m_sprites:
-  - {fileID: 21300000, guid: ec5173b0c9b29b5498983b4951672759, type: 3}
-  - {fileID: 21300000, guid: 05c291fc5bdc3e946bbda04e036152fc, type: 3}
-  - {fileID: 21300000, guid: b789062da0152694f9cf8f6af56aad58, type: 3}
+  m_Sprite: {fileID: 0}
 --- !u!114 &114106360269735742
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -6369,13 +6369,16 @@ MonoBehaviour:
   Fish: {fileID: 1969406654432958, guid: ac603292e6b17c245b09685c59ee8970, type: 2}
   Dart: {fileID: 1194246060422600, guid: 15181be2195f1e0468a5600eba874099, type: 2}
   Worm: {fileID: 1147816055821996, guid: 7fbf3d5d6ebb52b44ac098459dd8bf2a, type: 2}
-  RansomBox: {fileID: 1871996454230290, guid: 92d23def08ebf474cb8d12ce8cc6eefe, type: 2}
+  RansomBox: {fileID: 1167309487123678, guid: 6eb6b7dd4b4a01d4184909c76a6c172f, type: 2}
   ConstFire: {fileID: 1519057594522938, guid: cd7786b8dd0bd3e4d928c15f70f1b768, type: 2}
   Burst: {fileID: 1653879315611720, guid: f837bf8591e31144480b59d1150d8a4e, type: 2}
-  Garden: {fileID: 1889535387066462, guid: 347713c0d7966144393e75bf89002a0e, type: 2}
   S_Trojan: {fileID: 21300000, guid: 05c291fc5bdc3e946bbda04e036152fc, type: 3}
   S_Worm: {fileID: 21300000, guid: b789062da0152694f9cf8f6af56aad58, type: 3}
   S_Fishing: {fileID: 21300000, guid: ec5173b0c9b29b5498983b4951672759, type: 3}
+  S_BruteForce: {fileID: 21300000, guid: 8a7ea29589a2fa942978d0e49f785873, type: 3}
+  S_BackDoor: {fileID: 21300000, guid: 292297d4978b4f746832ba69767c23a0, type: 3}
+  S_DDOS: {fileID: 21300000, guid: 31eae761180e5a04b93c842604badef6, type: 3}
+  S_KeyLog: {fileID: 21300000, guid: 803c79120f936654ebe1520d19f1c8f0, type: 3}
 --- !u!114 &114193121052908130
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -6403,13 +6406,16 @@ MonoBehaviour:
   Fish: {fileID: 1969406654432958, guid: ac603292e6b17c245b09685c59ee8970, type: 2}
   Dart: {fileID: 1194246060422600, guid: 15181be2195f1e0468a5600eba874099, type: 2}
   Worm: {fileID: 1147816055821996, guid: 7fbf3d5d6ebb52b44ac098459dd8bf2a, type: 2}
-  RansomBox: {fileID: 1871996454230290, guid: 92d23def08ebf474cb8d12ce8cc6eefe, type: 2}
+  RansomBox: {fileID: 1167309487123678, guid: 6eb6b7dd4b4a01d4184909c76a6c172f, type: 2}
   ConstFire: {fileID: 1519057594522938, guid: cd7786b8dd0bd3e4d928c15f70f1b768, type: 2}
   Burst: {fileID: 1653879315611720, guid: f837bf8591e31144480b59d1150d8a4e, type: 2}
-  Garden: {fileID: 1889535387066462, guid: 347713c0d7966144393e75bf89002a0e, type: 2}
   S_Trojan: {fileID: 21300000, guid: 05c291fc5bdc3e946bbda04e036152fc, type: 3}
   S_Worm: {fileID: 21300000, guid: b789062da0152694f9cf8f6af56aad58, type: 3}
   S_Fishing: {fileID: 21300000, guid: ec5173b0c9b29b5498983b4951672759, type: 3}
+  S_BruteForce: {fileID: 21300000, guid: 8a7ea29589a2fa942978d0e49f785873, type: 3}
+  S_BackDoor: {fileID: 21300000, guid: 292297d4978b4f746832ba69767c23a0, type: 3}
+  S_DDOS: {fileID: 21300000, guid: 31eae761180e5a04b93c842604badef6, type: 3}
+  S_KeyLog: {fileID: 21300000, guid: 803c79120f936654ebe1520d19f1c8f0, type: 3}
 --- !u!114 &114230000313430284
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -6639,10 +6645,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_virus: 0
-  m_sprites:
-  - {fileID: 21300000, guid: ec5173b0c9b29b5498983b4951672759, type: 3}
-  - {fileID: 21300000, guid: 05c291fc5bdc3e946bbda04e036152fc, type: 3}
-  - {fileID: 21300000, guid: b789062da0152694f9cf8f6af56aad58, type: 3}
+  m_Sprite: {fileID: 0}
 --- !u!114 &114335831423058556
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -6768,13 +6771,16 @@ MonoBehaviour:
   Fish: {fileID: 1969406654432958, guid: ac603292e6b17c245b09685c59ee8970, type: 2}
   Dart: {fileID: 1194246060422600, guid: 15181be2195f1e0468a5600eba874099, type: 2}
   Worm: {fileID: 1147816055821996, guid: 7fbf3d5d6ebb52b44ac098459dd8bf2a, type: 2}
-  RansomBox: {fileID: 1871996454230290, guid: 92d23def08ebf474cb8d12ce8cc6eefe, type: 2}
+  RansomBox: {fileID: 1167309487123678, guid: 6eb6b7dd4b4a01d4184909c76a6c172f, type: 2}
   ConstFire: {fileID: 1519057594522938, guid: cd7786b8dd0bd3e4d928c15f70f1b768, type: 2}
   Burst: {fileID: 1653879315611720, guid: f837bf8591e31144480b59d1150d8a4e, type: 2}
-  Garden: {fileID: 1889535387066462, guid: 347713c0d7966144393e75bf89002a0e, type: 2}
   S_Trojan: {fileID: 21300000, guid: 05c291fc5bdc3e946bbda04e036152fc, type: 3}
   S_Worm: {fileID: 21300000, guid: b789062da0152694f9cf8f6af56aad58, type: 3}
   S_Fishing: {fileID: 21300000, guid: ec5173b0c9b29b5498983b4951672759, type: 3}
+  S_BruteForce: {fileID: 21300000, guid: 8a7ea29589a2fa942978d0e49f785873, type: 3}
+  S_BackDoor: {fileID: 21300000, guid: 292297d4978b4f746832ba69767c23a0, type: 3}
+  S_DDOS: {fileID: 21300000, guid: 31eae761180e5a04b93c842604badef6, type: 3}
+  S_KeyLog: {fileID: 21300000, guid: 803c79120f936654ebe1520d19f1c8f0, type: 3}
 --- !u!114 &114484956143675508
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -6822,13 +6828,16 @@ MonoBehaviour:
   Fish: {fileID: 1969406654432958, guid: ac603292e6b17c245b09685c59ee8970, type: 2}
   Dart: {fileID: 1194246060422600, guid: 15181be2195f1e0468a5600eba874099, type: 2}
   Worm: {fileID: 1147816055821996, guid: 7fbf3d5d6ebb52b44ac098459dd8bf2a, type: 2}
-  RansomBox: {fileID: 1871996454230290, guid: 92d23def08ebf474cb8d12ce8cc6eefe, type: 2}
+  RansomBox: {fileID: 1167309487123678, guid: 6eb6b7dd4b4a01d4184909c76a6c172f, type: 2}
   ConstFire: {fileID: 1519057594522938, guid: cd7786b8dd0bd3e4d928c15f70f1b768, type: 2}
   Burst: {fileID: 1653879315611720, guid: f837bf8591e31144480b59d1150d8a4e, type: 2}
-  Garden: {fileID: 1889535387066462, guid: 347713c0d7966144393e75bf89002a0e, type: 2}
   S_Trojan: {fileID: 21300000, guid: 05c291fc5bdc3e946bbda04e036152fc, type: 3}
   S_Worm: {fileID: 21300000, guid: b789062da0152694f9cf8f6af56aad58, type: 3}
   S_Fishing: {fileID: 21300000, guid: ec5173b0c9b29b5498983b4951672759, type: 3}
+  S_BruteForce: {fileID: 21300000, guid: 8a7ea29589a2fa942978d0e49f785873, type: 3}
+  S_BackDoor: {fileID: 21300000, guid: 292297d4978b4f746832ba69767c23a0, type: 3}
+  S_DDOS: {fileID: 21300000, guid: 31eae761180e5a04b93c842604badef6, type: 3}
+  S_KeyLog: {fileID: 21300000, guid: 803c79120f936654ebe1520d19f1c8f0, type: 3}
 --- !u!114 &114497995562792128
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -6926,13 +6935,16 @@ MonoBehaviour:
   Fish: {fileID: 1969406654432958, guid: ac603292e6b17c245b09685c59ee8970, type: 2}
   Dart: {fileID: 1194246060422600, guid: 15181be2195f1e0468a5600eba874099, type: 2}
   Worm: {fileID: 1147816055821996, guid: 7fbf3d5d6ebb52b44ac098459dd8bf2a, type: 2}
-  RansomBox: {fileID: 1871996454230290, guid: 92d23def08ebf474cb8d12ce8cc6eefe, type: 2}
+  RansomBox: {fileID: 1167309487123678, guid: 6eb6b7dd4b4a01d4184909c76a6c172f, type: 2}
   ConstFire: {fileID: 1519057594522938, guid: cd7786b8dd0bd3e4d928c15f70f1b768, type: 2}
   Burst: {fileID: 1653879315611720, guid: f837bf8591e31144480b59d1150d8a4e, type: 2}
-  Garden: {fileID: 1889535387066462, guid: 347713c0d7966144393e75bf89002a0e, type: 2}
   S_Trojan: {fileID: 21300000, guid: 05c291fc5bdc3e946bbda04e036152fc, type: 3}
   S_Worm: {fileID: 21300000, guid: b789062da0152694f9cf8f6af56aad58, type: 3}
   S_Fishing: {fileID: 21300000, guid: ec5173b0c9b29b5498983b4951672759, type: 3}
+  S_BruteForce: {fileID: 21300000, guid: 8a7ea29589a2fa942978d0e49f785873, type: 3}
+  S_BackDoor: {fileID: 21300000, guid: 292297d4978b4f746832ba69767c23a0, type: 3}
+  S_DDOS: {fileID: 21300000, guid: 31eae761180e5a04b93c842604badef6, type: 3}
+  S_KeyLog: {fileID: 21300000, guid: 803c79120f936654ebe1520d19f1c8f0, type: 3}
 --- !u!114 &114526069433635186
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -6945,10 +6957,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_virus: 0
-  m_sprites:
-  - {fileID: 21300000, guid: ec5173b0c9b29b5498983b4951672759, type: 3}
-  - {fileID: 21300000, guid: 05c291fc5bdc3e946bbda04e036152fc, type: 3}
-  - {fileID: 21300000, guid: b789062da0152694f9cf8f6af56aad58, type: 3}
+  m_Sprite: {fileID: 0}
 --- !u!114 &114533847664337624
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -7138,10 +7147,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_virus: 0
-  m_sprites:
-  - {fileID: 21300000, guid: ec5173b0c9b29b5498983b4951672759, type: 3}
-  - {fileID: 21300000, guid: 05c291fc5bdc3e946bbda04e036152fc, type: 3}
-  - {fileID: 21300000, guid: b789062da0152694f9cf8f6af56aad58, type: 3}
+  m_Sprite: {fileID: 0}
 --- !u!114 &114704497907345258
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -7154,10 +7160,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_virus: 0
-  m_sprites:
-  - {fileID: 21300000, guid: ec5173b0c9b29b5498983b4951672759, type: 3}
-  - {fileID: 21300000, guid: 05c291fc5bdc3e946bbda04e036152fc, type: 3}
-  - {fileID: 21300000, guid: b789062da0152694f9cf8f6af56aad58, type: 3}
+  m_Sprite: {fileID: 0}
 --- !u!114 &114719714868094254
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -7172,13 +7175,16 @@ MonoBehaviour:
   Fish: {fileID: 1969406654432958, guid: ac603292e6b17c245b09685c59ee8970, type: 2}
   Dart: {fileID: 1194246060422600, guid: 15181be2195f1e0468a5600eba874099, type: 2}
   Worm: {fileID: 1147816055821996, guid: 7fbf3d5d6ebb52b44ac098459dd8bf2a, type: 2}
-  RansomBox: {fileID: 1871996454230290, guid: 92d23def08ebf474cb8d12ce8cc6eefe, type: 2}
+  RansomBox: {fileID: 1167309487123678, guid: 6eb6b7dd4b4a01d4184909c76a6c172f, type: 2}
   ConstFire: {fileID: 1519057594522938, guid: cd7786b8dd0bd3e4d928c15f70f1b768, type: 2}
   Burst: {fileID: 1653879315611720, guid: f837bf8591e31144480b59d1150d8a4e, type: 2}
-  Garden: {fileID: 1889535387066462, guid: 347713c0d7966144393e75bf89002a0e, type: 2}
   S_Trojan: {fileID: 21300000, guid: 05c291fc5bdc3e946bbda04e036152fc, type: 3}
   S_Worm: {fileID: 21300000, guid: b789062da0152694f9cf8f6af56aad58, type: 3}
   S_Fishing: {fileID: 21300000, guid: ec5173b0c9b29b5498983b4951672759, type: 3}
+  S_BruteForce: {fileID: 21300000, guid: 8a7ea29589a2fa942978d0e49f785873, type: 3}
+  S_BackDoor: {fileID: 21300000, guid: 292297d4978b4f746832ba69767c23a0, type: 3}
+  S_DDOS: {fileID: 21300000, guid: 31eae761180e5a04b93c842604badef6, type: 3}
+  S_KeyLog: {fileID: 21300000, guid: 803c79120f936654ebe1520d19f1c8f0, type: 3}
 --- !u!114 &114726178868352404
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -7193,13 +7199,16 @@ MonoBehaviour:
   Fish: {fileID: 1969406654432958, guid: ac603292e6b17c245b09685c59ee8970, type: 2}
   Dart: {fileID: 1194246060422600, guid: 15181be2195f1e0468a5600eba874099, type: 2}
   Worm: {fileID: 1147816055821996, guid: 7fbf3d5d6ebb52b44ac098459dd8bf2a, type: 2}
-  RansomBox: {fileID: 1871996454230290, guid: 92d23def08ebf474cb8d12ce8cc6eefe, type: 2}
+  RansomBox: {fileID: 1167309487123678, guid: 6eb6b7dd4b4a01d4184909c76a6c172f, type: 2}
   ConstFire: {fileID: 1519057594522938, guid: cd7786b8dd0bd3e4d928c15f70f1b768, type: 2}
   Burst: {fileID: 1653879315611720, guid: f837bf8591e31144480b59d1150d8a4e, type: 2}
-  Garden: {fileID: 1889535387066462, guid: 347713c0d7966144393e75bf89002a0e, type: 2}
   S_Trojan: {fileID: 21300000, guid: 05c291fc5bdc3e946bbda04e036152fc, type: 3}
   S_Worm: {fileID: 21300000, guid: b789062da0152694f9cf8f6af56aad58, type: 3}
   S_Fishing: {fileID: 21300000, guid: ec5173b0c9b29b5498983b4951672759, type: 3}
+  S_BruteForce: {fileID: 21300000, guid: 8a7ea29589a2fa942978d0e49f785873, type: 3}
+  S_BackDoor: {fileID: 21300000, guid: 292297d4978b4f746832ba69767c23a0, type: 3}
+  S_DDOS: {fileID: 21300000, guid: 31eae761180e5a04b93c842604badef6, type: 3}
+  S_KeyLog: {fileID: 21300000, guid: 803c79120f936654ebe1520d19f1c8f0, type: 3}
 --- !u!114 &114736795878195348
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -7273,10 +7282,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_virus: 0
-  m_sprites:
-  - {fileID: 21300000, guid: ec5173b0c9b29b5498983b4951672759, type: 3}
-  - {fileID: 21300000, guid: 05c291fc5bdc3e946bbda04e036152fc, type: 3}
-  - {fileID: 21300000, guid: b789062da0152694f9cf8f6af56aad58, type: 3}
+  m_Sprite: {fileID: 0}
 --- !u!114 &114829078419256390
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -7369,10 +7375,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_virus: 0
-  m_sprites:
-  - {fileID: 21300000, guid: ec5173b0c9b29b5498983b4951672759, type: 3}
-  - {fileID: 21300000, guid: 05c291fc5bdc3e946bbda04e036152fc, type: 3}
-  - {fileID: 21300000, guid: b789062da0152694f9cf8f6af56aad58, type: 3}
+  m_Sprite: {fileID: 0}
 --- !u!114 &114894528240120636
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -7385,10 +7388,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_virus: 0
-  m_sprites:
-  - {fileID: 21300000, guid: ec5173b0c9b29b5498983b4951672759, type: 3}
-  - {fileID: 21300000, guid: 05c291fc5bdc3e946bbda04e036152fc, type: 3}
-  - {fileID: 21300000, guid: b789062da0152694f9cf8f6af56aad58, type: 3}
+  m_Sprite: {fileID: 0}
 --- !u!114 &114897082622755252
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -7439,6 +7439,16 @@ MonoBehaviour:
   - {fileID: 1137493442370866}
   - {fileID: 1071923129653518}
   m_lookRadius: 2
+  pickupSounds:
+  - {fileID: 8300000, guid: 4da069f88c956864992d56f7bab3d630, type: 3}
+  - {fileID: 8300000, guid: 872784faac7894c40bf41be8b11a8999, type: 3}
+  - {fileID: 8300000, guid: c55bc0ed55f86e049be3e4e68ef10733, type: 3}
+  - {fileID: 8300000, guid: ed46fa9fd3896c44e8c7530ec73d52ad, type: 3}
+  activateSounds:
+  - {fileID: 8300000, guid: 424f6144ed7f94349aad86bdcbb16aa7, type: 3}
+  - {fileID: 8300000, guid: 0df9ef8eb61035544b18b16e245bbed5, type: 3}
+  - {fileID: 8300000, guid: 075f85259c6cf0246b3a0f5285e6b526, type: 3}
+  - {fileID: 8300000, guid: 2af54cfaedb527a42b53c110e66e96bc, type: 3}
   usbSlots:
   - {fileID: 1535110127959132}
   - {fileID: 1039673564449488}
@@ -7449,7 +7459,7 @@ MonoBehaviour:
   - {fileID: 1872378351961272}
   - {fileID: 1069567921142396}
   movmentState: 0
-  pickUpDistance: 1
+  pickUpDistance: 1.5
 --- !u!114 &114987717095817868
 MonoBehaviour:
   m_ObjectHideFlags: 1

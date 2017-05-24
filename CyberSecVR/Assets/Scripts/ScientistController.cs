@@ -11,6 +11,7 @@ public class ScientistController : MonoBehaviour
     {
         partoling,
         gettingUsb,
+        pickingPC,
         seekingPC
     }
 
@@ -38,13 +39,11 @@ public class ScientistController : MonoBehaviour
     public float pickUpDistance;
 
     private Transform usbWaypoint;
-    // Use this for initialization
+
     void Start()
     {
         foundslot = false;
         movmentState = state.partoling;
-        // m_seesUSB = false;
-        //  m_parented = false;
 
         m_navMesh = GetComponent<NavMeshAgent>();
 
@@ -59,11 +58,8 @@ public class ScientistController : MonoBehaviour
        
     }
 
-    // Update is called once per frame
     void Update()
     {
-
-
         GetComponent<Animator>().SetFloat("Speed", GetComponent<Rigidbody>().velocity.magnitude);
 
         switch (movmentState)
@@ -102,35 +98,24 @@ public class ScientistController : MonoBehaviour
 
                 if (dist <= pickUpDistance)
                 {
-                    // m_seesUSB = false;
-                    //m_parented = true;
-
                     m_usbToGrab.transform.position = t_hand.transform.position;
                     m_usbToGrab.transform.rotation = Quaternion.Euler(0, 0, -90);
                     m_usbToGrab.transform.localScale = new Vector3(0.1f, 0.1f, 0.1f);
                     m_usbToGrab.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeRotation;
                     AudioSource.PlayClipAtPoint(pickupSounds[Random.Range(0, pickupSounds.Length)], transform.position);
-                    movmentState = state.seekingPC;
+                    movmentState = state.pickingPC;
                     foundslot = false;
                 }
 
                 break;
-            case state.seekingPC:
-                if (!foundslot)
-                {
-                    foreach (GameObject G in usbSlots)
-                    {
-                        if (G.gameObject.GetComponent<UsbGrabber>().free == true)
-                        {
-                            usbWaypoint = G.gameObject.transform;
-                            m_usbToGrab.GetComponent<UsbProgram>().inSlot = true;
-                            
-                            foundslot = true;
-                            break;
-                        }
-                    }
-                }
+            case state.pickingPC:
 
+                    usbWaypoint = usbSlots[Random.Range(0, usbSlots.Length)].gameObject.transform;
+                    movmentState = state.seekingPC;
+               
+                break;
+            case state.seekingPC:
+             
                 m_navMesh.destination = usbWaypoint.position;
                 m_usbToGrab.transform.position = t_hand.transform.position;
                 float distance = Vector3.Distance(usbWaypoint.position, transform.position);
@@ -139,11 +124,12 @@ public class ScientistController : MonoBehaviour
                 {
                     m_usbToGrab.transform.localScale = new Vector3(0.023f, 0.023f, 0.023f);
                     m_usbToGrab.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.None;
-                    m_usbToGrab.transform.position = usbWaypoint.position;// += new Vector3(0f, 0.1f, 0f);
+                    m_usbToGrab.transform.position = usbWaypoint.position;
                     AudioSource.PlayClipAtPoint(activateSounds[Random.Range(0, activateSounds.Length)], transform.position);
                     movmentState = state.partoling;
                 }
                 break;
+            
 
         }
     }
