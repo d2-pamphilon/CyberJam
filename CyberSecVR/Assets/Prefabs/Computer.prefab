@@ -498,6 +498,8 @@ MonoBehaviour:
   S_Trojan: {fileID: 21300000, guid: 05c291fc5bdc3e946bbda04e036152fc, type: 3}
   S_Worm: {fileID: 21300000, guid: b789062da0152694f9cf8f6af56aad58, type: 3}
   S_Fishing: {fileID: 21300000, guid: ec5173b0c9b29b5498983b4951672759, type: 3}
+  S_BruteForce: {fileID: 21300000, guid: 8a7ea29589a2fa942978d0e49f785873, type: 3}
+  S_BackDoor: {fileID: 21300000, guid: 292297d4978b4f746832ba69767c23a0, type: 3}
 --- !u!114 &114228887739162670
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -523,6 +525,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_virus: 0
+  m_Sprite: {fileID: 0}
 --- !u!114 &114502369191000744
 MonoBehaviour:
   m_ObjectHideFlags: 1

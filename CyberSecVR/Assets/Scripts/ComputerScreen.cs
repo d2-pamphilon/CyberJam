@@ -27,7 +27,7 @@ namespace ComputerScreen
         // Update is called once per frame
         void Update()
         {
-
+            
             // if (m_virus == UsbProgram.Program.PhishingAttack)
             if (m_virus != UsbProgram.Program.NONE)
             {
@@ -41,7 +41,6 @@ namespace ComputerScreen
             switch (m_virus)
             {
                 case UsbProgram.Program.PhishingAttack:
-
                     m_Canvas.enabled = true;
                     m_Image.sprite = m_Sprite.S_Fishing;
                     break;
@@ -52,6 +51,22 @@ namespace ComputerScreen
                 case UsbProgram.Program.Worms:
                     m_Canvas.enabled = true;
                     m_Image.sprite = m_Sprite.S_Worm;
+                    break;
+                case UsbProgram.Program.BruteForce:
+                    m_Canvas.enabled = true;
+                    m_Image.sprite = m_Sprite.S_BruteForce;
+                    break;
+                case UsbProgram.Program.BackDoor:
+                    m_Canvas.enabled = true;
+                    m_Image.sprite = m_Sprite.S_BackDoor;
+                    break;
+                case UsbProgram.Program.DDOS:
+                    m_Canvas.enabled = true;
+                    m_Image.sprite = m_Sprite.S_DDOS;
+                    break;
+                case UsbProgram.Program.KeyLogger:
+                    m_Canvas.enabled = true;
+                    m_Image.sprite = m_Sprite.S_KeyLog;
                     break;
 
             }

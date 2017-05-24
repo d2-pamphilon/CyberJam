@@ -12,15 +12,16 @@ public class PrefabSprites : MonoBehaviour
 
     public GameObject ConstFire;
     public GameObject Burst;
-
-
-
-    //Good
-    public GameObject Garden;
+    
 
     //Image
     public Sprite S_Trojan;
     public Sprite S_Worm;
     public Sprite S_Fishing;
+    public Sprite S_BruteForce;
+    public Sprite S_BackDoor;
+    public Sprite S_DDOS;
+    public Sprite S_KeyLog;
+    
 
 }
