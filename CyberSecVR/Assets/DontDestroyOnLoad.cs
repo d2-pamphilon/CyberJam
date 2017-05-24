@@ -2,7 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DontDestroyOnLoad : MonoBehaviour {
+public class DontDestroyOnLoad : MonoBehaviour
+{
+    void Start()
+    {
+        DontDestroyOnLoad(this);
+    }
 
-DontDestroyOnLoad();
 }
+
